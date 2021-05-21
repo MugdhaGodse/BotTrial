@@ -1,0 +1,1925 @@
+version: "2.0"
+
+nlu:
+
+- intent: start
+  examples: |
+    - hey
+    - hello
+    - .
+    - 👋
+    - hi
+    - what's app
+
+- intent: end
+  examples: |
+    - ok done
+    - thanks
+    - thakyou
+    - Bye
+    - End
+    - okay
+    - all right
+    - thanks
+    - great
+    - it's sounds good
+    - bye
+
+- intent: email
+  examples: |
+    - send email
+    - send mail
+    - contact college
+
+#Reamining Content
+
+- intent: admission_enquiry
+  examples: |
+    - admission
+    - how to take addmission
+    - want to take addmission
+    - after Diploma
+    - after 12th
+    - after polytechnic
+    - after HSC
+
+- intent: student_section
+  examples: |
+    - how to contact student section
+    - student section
+    - I Card
+    - bonafied
+    - Mark memo
+    - degree certificate
+    - scholarship enquiry
+    - fee structure
+
+
+- intent: scholarship_enquiry
+  examples: |
+    - Can I get scholarship
+    - how to get scholarship
+    - OBC
+    - SC
+    - NT
+    - VJNT
+    - SBC
+    - Open
+    - EBC
+    - how to fill scholarship form
+    - does college provide scholarship
+
+- intent: educationloan_enquiry
+  examples: |
+    - Can I get education loan
+    - how to get education loan
+    - education loan
+    - loan
+
+
+
+- intent: tpo_information
+  examples: |
+    - who is is the training and placement officer of your college?
+    - which one is the TPO of your college?
+    - give me information about TPO
+    - who is the placement officer?
+    - TPO
+
+- intent: visit_tpo
+  examples: |
+    - click here
+
+- intent: tpo_contact
+  examples: |
+    - can i get TPO contact?
+    - how to contact TPO?
+    - Show me TPO contact details
+    - give me email-id of TPO
+    - contact TPO
+    - give me mobile no of TPO
+
+- intent: tpo_meet
+  examples: |
+    - can I meet TPO?
+    - can I visit TPO?
+    - can i get to their office
+    - Can i meet them face to face?
+
+- intent: any_other_than_tpo
+  examples: |
+    - can i contact any other faculty if they are not available?
+    - can i contact other than TPO
+    - TPO sir not available
+    - i can't reach to TPO
+
+- intent: placememt_information
+  examples: |
+    - does your college provide 100% placements?
+    - what percentage of your college has placement?
+
+
+- intent: upcomimg_campus_details
+  examples: |
+    - can i get upcoming campus details?
+    - what is the upcoming plan for campus?
+    - latest update from campus
+
+- intent: main_recruiters
+  examples: |
+    - i want to know about placements
+    - which are the main recruiters of your college?
+    - which companies have tires with you?
+    - give some information about placements
+
+- intent: placement_MNC
+  examples: |
+    - do you have placement for MNCs?
+    - do your college offer placement for MNCs?
+    - MNCs
+
+- intent: placement_non_core_branch
+  examples: |
+    - do you have a placement for a non-core branch?
+    - is there any placement for civil engineering?
+    - is there any placement for Mechanical engineering?
+    - is there any placement for Electrical engineering?
+
+- intent: placement_core_branch
+  examples: |
+    - do you have placement for core branch
+    - is there any placement for computer engineering?
+    - is there any placement for Information Technology?
+    - is there any placement for Electronics engineering?
+
+- intent: maximum_package
+  examples: |
+    - what is the maximum package at your college?
+    - highest package of your college
+    - maximum offer i can get
+
+- intent: traning_placement
+  examples: |
+    - does college provide training for placement?
+    - can i get training for placement?
+
+
+- intent: prev_traning_details
+  examples: |
+    - do you have previous training, workshop or event details
+
+
+- intent: traning_organize_by_MNC
+  examples: |
+    - is there any training organized by Companies or MNCs?
+
+
+- intent: traning_fees_inquire
+  examples: |
+    - does i need to pay any fees for training or workshop
+    - is it required money to pay for training or workshop?
+    - does traning require any additional fees?
+    - does training require any donation?
+
+- intent: time_inquire
+  examples: |
+    - what is the time of training?
+    - when this training or workshop conducted?
+    - does training require additional time rather than college?
+
+
+- intent: registration_traning
+  examples: |
+    - does it require to register for training?
+    - how can i register for training?
+
+- intent: certification_of_traning
+  examples: |
+    - can i get certification after training or workshop?
+    - does traning provide certification?
+
+- intent: more_detail_traning
+  examples: |
+    - how can i get more details about training?
+    - tell me more about traning and worshops?
+    - show me more details regarding traning
+
+- intent: quries_regarding_placement
+  examples: |
+    - i have queries regarding my placement
+    - i want to complaint regarding placement
+    - i want to enquire regarding placement
+    - i have doubt  about placement
+
+- intent: computer_science
+  examples: |
+    - computer science and engineering
+
+- intent : info_technology
+  examples: |
+    - information technology
+
+- intent : mech_engineering
+  examples: |
+    - mechenical engineering
+
+- intent : civil_engineering
+  examples: |
+    - civil engineering
+
+- intent : electrical_engineering
+  examples: |
+    - electrical engineering
+
+- intent : electronic_engineering
+  examples: |
+    - electronic engineering
+
+- intent : placement_records
+  examples: |
+    - can you please give me placement records
+    - can i get history of placement
+    - previous year placement data
+    - placement records
+
+- intent : placement_record_of_2013_14
+  examples: |
+    - placement record of 2013-14
+
+- intent : placement_record_of_2014_15
+  examples: |
+    - placement record of 2014-15
+
+- intent : placement_record_of_2015_16
+  examples: |
+    - placement record of 2015-16
+
+- intent : placement_record_of_2016_17
+  examples: |
+    - placement record of 2013-14
+
+- intent : placement_record_of_2017_18
+  examples: |
+    - placement record of 2017-18
+
+
+#Lirary intent
+- intent: Lib1
+  examples: |
+    - Name of library reference help service?
+    - Name of library Master?
+    - May I know Library Incharge?
+    - Who is the library Incharge?
+
+- intent: Lib2
+  examples: |
+    - Where do I find the Books Database?
+    - book Database?
+    - how to Search the book database?
+    - How to check whether a book is available or not?
+    - How to get info of books
+
+- intent: Lib3
+  examples: |
+    - Which types of books are available?
+    - What are different types of books?
+    - type of book?
+    - Varieties of books?
+
+- intent: Lib4
+  examples: |
+    - Where do I find my library Barcode number?
+    - How do I get a barcode number for the library?
+    - Barcode number?
+
+- intent: Lib5
+  examples: |
+    - opening time for the library?
+    - closing time for the library?
+    - Timing of the library?
+
+- intent: Lib6
+  examples: |
+    - Where is the library located on campus?
+    - please give me a library location?
+    - library location?
+    - how do I find the library?
+
+- intent: Lib7
+  examples: |
+    - what facility library was provided?
+    - what are the services of the library?
+    - library services?
+    - library facility?
+
+- intent: Lib8
+  examples: |
+    - May I download the pdf from the library database?
+    - can I download the pdf or book?
+    - can I download the reference book?
+    - download the book or pdf?
+
+- intent: Lib9
+  examples: |
+    - how can I access the online book or pdf?
+    - how can I get the reference book?
+    - is the book available online?
+    - How do I find e-book?
+
+- intent: Lib10
+  examples: |
+    - How many books can a student issue?
+    - No. of book students get?
+    - how many books each student gets?
+    - No. of book access per student?
+
+- intent: Lib11
+  examples: |
+    - How do I find my reading for class?
+    - how do I find the books?
+    - how can I access my class subject books?
+
+- intent: Lib12
+  examples: |
+    - May I download a pdf or book online and upload it to my classroom?
+    - can I upload the books to the classroom?
+    - upload a book?
+
+- intent: Lib13
+  examples: |
+    - What is the library time for the Department?
+    - Time or day for the mechanical Department?
+    - Time  or day for the Electrical Department?
+    - Time or day in the Computer Department?
+    - Time or day for the Civil Department?
+    - Time or day for the IT / information Technolog
+
+- intent: Lib14
+  examples: |
+    - Books available online or offline?
+    - Do books are online or offline?
+
+- intent: Lib15
+  examples: |
+    - Student time for the library?
+    - Between what time library is available for students?
+    - Library time for the student?
+
+- intent: Lib16
+  examples: |
+    - Faculty/Teacher time for the library?
+    - Between what time library is available for Faculty / Teacher?
+    - Library time for the Faculty/ Teacher?
+
+- intent: Lib17
+  examples: |
+    - How can I find the journals?
+    - How can I find the article?
+    - I want the Journal
+    - Journal
+    - Article
+
+- intent: Lib18
+  examples: |
+    - How Do you request a book from a library catalog?
+    - How do I pick-up the book?
+    - how do I issue a book?
+    - what is the procedure for issuing a book?
+    - How can I get an offline book?
+
+- intent: Lib19
+  examples: |
+    - How do I request a research consultation with a librarian?
+
+- intent: Lib20
+  examples: |
+    - What is the library phone number?
+    - May I know the library number?
+    - How  do I contact the library?
+    - library contact number?
+    - library phone number?
+
+- intent: Lib21
+  examples: |
+    - Does the library have the internet?
+    - Is the library has wifi?
+    - Library has the internet / wifi facility.
+
+- intent: Lib22
+  examples: |
+    - Is a paper available in the library?
+    - Which newspaper paper is available ?
+    - What are the different newspapers in the library?
+    - News paper
+
+- intent: Lib23
+  examples: |
+    - Is there any due date for books?
+    - Is there any charge for books late?
+    - late fee
+    - how much did I pay for the late charge for the book?
+    - Is there any fine for late submission of books?
+
+- intent: Lib24
+  examples: |
+    - Is any renovation policy?
+    - Duration for renewal of book?
+    - After how many days renew the book?
+    - renew book?
+
+- intent: Lib25
+  examples: |
+    - Can a guest use the library?
+    - can an alumni use the library?
+    - how can a guest use the library?
+    - how can an alumni use a library?
+    - can a guest enter the library?
+    - guests use the library?
+
+- intent: Lib26
+  examples: |
+    - what is the hour of the library?
+    - Is the library still open?
+    - what is the working hour of the library?
+
+- intent: Lib27
+  examples: |
+    - Can you give me the email of the library?
+    - what is the email of the library?
+    - email of library
+    - may I know the email of the library?
+
+- intent: Lib28
+  examples: |
+    - How do I reserve a study room in the library?
+    - reserve a library study room.
+    - study room reserves in the library?
+
+- intent: Lib29
+  examples: |
+    - how do I find the resource library guide?
+    - resource guide for library?
+    - find the resource guide for the library?
+- intent: Lib30
+  examples: |
+    - How can I check out a book?
+    - how can I check out a book from the library?
+    - checking out books from the library?
+- intent: Lib31
+  examples: |
+    - what is the procedure of library registration?
+    - how do I enroll for the library?
+    - how do I get library access?
+    - library registration
+    - library access
+- intent: Lib32
+  examples: |
+    - where are the books?
+    - where are all books?
+    - where can I find the book?
+    - location of book?
+- intent: Lib33
+  examples: |
+    - How do I enter the library?
+    - entry in library?
+    - exit library
+    - How do I Exit the library
+- intent: Lib34
+  examples: |
+    - Is extra pay for the library?
+    - extra charges for library books?
+    - can I access the free book from the library?
+- intent: Lib35
+  examples: |
+    - How many Library cards get to each student?
+    - library card per student?
+    - No. of library cards get the student?
+- intent: Lib36
+  examples: |
+    - If I lose the library card?
+    - loss library card?
+    - how do I get the new library card?
+    - how do I request for the new card?
+- intent: Lib37
+  examples: |
+    - How often  can you visit the library per week?
+    - visit the library per week?
+- intent: Lib38
+  examples: |
+    - who can borrow books from the library?
+    - borrow books from the library?
+- intent: Lib39
+  examples: |
+    - how do I request materials not held by the library?
+- intent: Lib40
+  examples: |
+    - When will I return the book?
+    - time to return the book?
+    - when the student returns the library book.
+    - return book.
+
+
+#Hostel intent
+- intent: Library
+  examples: |
+    - What is the opening time for Library?
+    - what is the closing time for Library?
+
+- intent: Hostel
+  examples: |
+    - How many hostels are there in this college?
+
+
+- intent: Hostel1
+  examples: |
+    - What about the medical facilities in the hostel?
+    - When the medical-check up is done?
+    - When the doctors come to the hostel for checkup?
+    - Is any health related issue checked in the hostel?
+    - Timing for doctors' visit to a hostel?
+
+
+- intent: Hostel2
+  examples: |
+    - Name of the College Hostel.
+    - Can you please tell me the name of the government hostel?
+    - Does College have the hostel?
+    - May I know the hostel name?
+    - Can you give me hostel info?
+
+
+- intent: Hostel3
+  examples: |
+    - What is the fee for hostel admission per year?
+    - How much do you spend in hostel per year?
+    - hostel fees
+    - fee structure for hostel?
+
+
+- intent: Hostel4
+  examples: |
+    - Is this hostel for boys and girls both?
+    - The hostel is separate for boys and girls?
+
+
+- intent: Hostel5
+  examples: |
+    - Are you conducting any skill courses for hostellers?
+    - which program is celebrated in the hostel?
+    - Which activities are held in the hostel?
+    - Do you have any activities in the hostel?
+
+
+- intent: Hostel6
+  examples: |
+    - Any provision is looking at covid-19 pandemic?
+    - How do you manage the hostel work in covid?
+    - What about covid situation in the hostel?
+
+
+- intent: Hostel7
+  examples: |
+    - what are the fitness activities for hostellers?
+    - how do the students fit in the hostel?
+    - health related action
+
+
+- intent: Hostel8
+  examples: |
+    - Do you have an anti-ragging committee?
+    - is hostel ragging free?
+    - how is the hostel ragging free?
+    - if any ragging is done in the hostel?
+
+
+- intent: Hostel9
+  examples: |
+    -  When I can visit the campus and hostel?
+    - how do I visit the campus and hostel?
+    - Can a guest visit the hostel campus?
+
+
+- intent: Hostel10
+  examples: |
+    - Who is the Rector / Warden of the hostel?
+    - who is the warden?
+    - name of rector?
+    - name of warden?
+    - may I know the rector and warden?
+
+
+- intent: Hostel11
+  examples: |
+    - What is the capacity for a hostel for girls and boys?
+
+
+- intent: Hostel12
+  examples: |
+    - Are there A/C and Non A/c rooms for hostellers?
+    - Does the hostel have an AC facility?
+
+
+- intent: Hostel13
+  examples: |
+    - What is the Process of allotment of a seat?
+    - how to enroll for a hostel?
+    - how do I get admission in a hostel?
+    - Is the hostel for all students?
+
+
+- intent: Hostel14
+  examples: |
+    - Do you have hostel accomodation along with a bathroom?
+
+
+- intent: Hostel15
+  examples: |
+    - What is the sharing capacity of a room?
+    - how many girls are in the room?
+    - how many boys are in the room?
+    - sharing capacity of room?
+
+
+- intent: Hostel16
+  examples: |
+    - Do you have separate messes for girls and boys?
+
+
+- intent: Hostel17
+  examples: |
+    - What type of basic infrastructure has been provided to the hostellers?
+
+
+- intent: Hostel18
+  examples: |
+    - What is the system or process for hostellers to visit their hometown?
+    - how do students visit home?
+
+- intent: Hostel19
+  examples: |
+    - What about ragging in the hostel?
+
+- intent: Hostel20
+  examples: |
+    - Can the hosteller keep a vehicle in the hostel?
+    - can hostellers use their own vehicle?
+    - hostel gives permission for vehicle?
+
+- intent: Hostel21
+  examples: |
+    - What about the security of our students who are in the hostel?
+    - Is there any security in the hostel?
+
+- intent: Hostel22
+  examples: |
+    - Do you have the Helpline no for hostel?
+    - share the hostel number?
+    - hostel helpline?
+    - how do I contact the hostel for any query?
+    - hostel contact
+
+- intent: Hostel23
+  examples: |
+    - Where is the girls and boys hostel located?
+    - hostel location?
+
+- intent: Hostel24
+  examples: |
+    - Do you have a full time residential warden?
+    - Is the warden living in a hostel?
+    - Is the hostel has the warden round?
+
+- intent: Hostel25
+  examples: |
+    - What is the timing for hostel mess?
+    - when the mess starts?
+    - breakfast time?
+    - lunch time?
+    - dinner time?
+
+- intent: Hostel26
+  examples: |
+    - what is the rent of a mess per month?
+    - mess price
+    - How many rs for mess?
+
+
+- intent: Hostel27
+  examples: |
+    - Is hostel has ATM facility?
+    - ATM
+
+- intent: Hostel28
+  examples: |
+    - Is Hostel have a study room?
+    - how do I study in a hostel?
+    - Is any noise free place in the hostel?
+    - Does the hostel have the study space?
+
+- intent: Hostel29
+  examples: |
+    - Is Hostel have a wifi facility?
+    - What about the internet facility in hostels?
+    - hostel has the Internet?
+    - Is the internet provided in the hostel?
+
+
+- intent: Hostel30
+  examples: |
+    - Is the hostel is Hygenic?
+    - hostel is clean?
+    - hostel clean daily?
+    - how do you keep our hostel clean?
+
+
+- intent: Hostel31
+  examples: |
+    - how many hostels are there for the girls?
+
+- intent: Hostel32
+  examples: |
+    - how many hostels are for boys?
+
+- intent: Hostel33
+  examples: |
+    - what are features provided by Geca Hostel.
+
+- intent: Hostel34
+  examples: |
+    - what kind of food is provided in the mess?
+
+- intent: Hostel35
+  examples: |
+    - Does the mess follow a food chart:
+
+- intent: Hostel36
+  examples: |
+    - whether mobile is allowed in Hostel?
+
+- intent: Hostel37
+  examples: |
+    - What are the visiting hrs. in the hostel for parents?
+
+- intent: exam
+  examples: |
+    - when is my next exam?
+    - exam
+    - next exam
+    - can you tell me about my class test?
+    - when will be my next examination
+    - examination
+    - when we will be having our next CT?
+    - when we will be having our next examination?
+    - exam timetable
+    - can you show me my exam timetable
+    - show me my exam timetable
+    - next exam timetable
+- intent: CSE
+  examples: |
+     - CSE exams
+     - CSE examinations
+- intent: IT
+  examples: |
+     - IT exams
+     - IT examinations
+- intent: ENTC
+  examples: |
+     - ENTC exams
+     - ENTC examinations
+- intent: ELE
+  examples: |
+     - ELE exams
+     - ELE examinations
+- intent: MECH
+  examples: |
+     - MECH exams
+     - MECH examinations
+- intent: CSL
+  examples: |
+     - CSL exams
+     - CSL examinations
+
+- intent: FE_CSE
+  examples: |
+     - FE_CSE exams
+     - FE_CSE examinations
+- intent: SE_CSE
+  examples: |
+     - SE_CSE exams
+     - SE_CSE examinations
+- intent: TE_CSE
+  examples: |
+     - TE_CSE exams
+     - TE_CSE examinations
+- intent: BE_CSE
+  examples: |
+     - BE_CSE exams
+     - BE_CSE examinations
+
+- intent: FE_IT
+  examples: |
+     - FE_IT exams
+     - FE_IT examinations
+- intent: SE_IT
+  examples: |
+     - SE_IT exams
+     - SE_IT examinations
+- intent: TE_IT
+  examples: |
+     - TE_IT exams
+     - TE_IT examinations
+- intent: BE_IT
+  examples: |
+     - BE_IT exams
+     - BE_IT examinations
+
+- intent: FE_ENTC
+  examples: |
+     - FE_ENTC exams
+     - FE_ENTC examinations
+- intent: SE_ENTC
+  examples: |
+     - SE_ENTC exams
+     - SE_ENTC examinations
+- intent: TE_ENTC
+  examples: |
+     - TE_ENTC exams
+     - TE_ENTC examinations
+- intent: BE_ENTC
+  examples: |
+     - BE_ENTC exams
+     - BE_ENTC examinations
+
+- intent: FE_ELE
+  examples: |
+     - FE_ELE exams
+     - FE_ELE examinations
+- intent: SE_ELE
+  examples: |
+     - SE_ELE exams
+     - SE_ELE examinations
+- intent: TE_ELE
+  examples: |
+     - TE_ELE exams
+     - TE_ELE examinations
+- intent: BE_ELE
+  examples: |
+     - BE_ELE exams
+     - BE_ELE examinations
+
+- intent: FE_MECH
+  examples: |
+     - FE_MECH exams
+     - FE_MECH examinations
+- intent: SE_MECH
+  examples: |
+     - SE_MECH exams
+     - SE_MECH examinations
+- intent: TE_MECH
+  examples: |
+     - TE_MECH exams
+     - TE_MECH examinations
+- intent: BE_MECH
+  examples: |
+     - BE_MECH exams
+     - BE_MECH examinations
+
+- intent: FE_CSL
+  examples: |
+     - FE_CSL exams
+     - FE_CSL examinations
+- intent: SE_CSL
+  examples: |
+     - SE_CSL exams
+     - SE_CSL examinations
+- intent: TE_CSL
+  examples: |
+     - TE_CSL exams
+     - TE_CSL examinations
+- intent: BE_CSL
+  examples: |
+     - BE_CSL exams
+     - BE_CSL examinations
+
+
+
+# CollegeGym
+
+- intent: CollegeGym
+  examples: |
+    - Does the college has the gym?
+    - Does the college has the gym for girls?
+    - Does the college has the gym for boys?
+    - Is the gym is available for both?
+
+- intent: GymFees
+  examples: |
+    - Is there any fees we have to pay for getting membership in gym?
+    - It there is any fees for gym?
+    - Is there is any cost to enroll in to gym?
+
+- intent: GymJoin
+  examples: |
+    - How can I join the gym?
+    - How can I register for the gym?
+    - Is there any seprate form we have to fill?
+    - How I get enroll in college gym?
+
+- intent: GymAway
+  examples: |
+    - Is the gym away from the college campus?
+    - Is the gym location is away from college premises?
+    - location of gym center?
+
+- intent: GymTime
+  examples: |
+    - What are the timings for the gym?
+    - opening time gor gym?
+    - closing time for gym?
+
+- intent: GymRegistration
+  examples: |
+    - Is any registration we have to do in gym?
+    - if any registration is needed in gym?
+    - gym registration
+
+- intent: GymEquipment
+  examples: |
+    - How many equipments are there in the gym?
+    - which type of equipments available in gym?
+    - gym equipment
+    - What are the diffrent equipment available in gym?
+
+- intent: GymMachine
+  examples: |
+    - Are the machines well maintained and newly setup?
+    -  machine is properly in gym?
+
+- intent: GymCleaning
+  examples: |
+    - Is there proper regular cleaning done in the gym?
+    - Is the regular cleaning is done is gym?
+    - Does the gym is clean?
+
+- intent: WeighingMachine
+  examples: |
+    - Is there is weighing machine available in the gym?
+    - weighing machine?
+
+- intent: GymTrainer
+  examples: |
+    - Is there particular trainer alloted in the gym for training girls as well as boys?
+    - Is any trainer is available in gym?
+    - gym trainer
+
+- intent: GymInstruction
+  examples: |
+    - Is there any instruction manual available for using equipments in the gym?
+    - Is any instruction manual in gym for new person?
+
+
+- intent: GymMember
+  examples: |
+    - How many members are allowed at a time in the gym?
+    - members allow in gym?
+
+- intent: GymYoga
+  examples: |
+    - Is there yoga accessories available in the gym?
+    - yoga accessories is available in gym?
+    - Does the gym has yoga accessories?
+
+- intent: GymExtension
+  examples: |
+    - Will be there future extension of gym and its equipments?
+    - gym future extension.
+
+
+# College Canteen
+
+- intent: College_Canteen
+  examples: |
+    - Does College has Canteen?
+    - Is college Provide Canteen facility?
+    - Is canteen is available in college?
+    - College Canteen
+    - Canteen
+    - Canteen Facility
+    - Canteen Services
+    - Canteen Services Provided
+    - Cantten Features Provided
+    - Canteen Location
+    - Where is Canteen
+    - Canteen food
+    - Types of Food Available in Canteen
+    - Canteen time
+    - time for canteen
+    - Canteen  photos
+
+
+
+
+# College sports
+
+- intent: CollegeSports
+  examples: |
+   - Does the college held a sports competition?
+   - college sport
+   - Is any sports competition in college?
+
+- intent: NationalSport
+  examples: |
+   - Is the sports competition held at national level?
+   - Is Geca college held the National Level sports.
+   - Does the college organize the national level sports?
+
+
+- intent: sportParticipation
+  examples: |
+   - How can the students participate in sports?
+   - Do girls participate in sports?
+   - Do boys participate in sports?
+   - Can girls and boys both participate in sports?
+
+
+- intent: sportsGround
+  examples: |
+   - Does the college have the sports ground?
+   - which sports grounds are available in college?
+   - sports ground
+   - Sports Ground
+
+- intent: sportsOther
+  examples: |
+   - Can other college students participate in this sport?
+   - can other colleges participate in sports?
+   - can other colleges participate?
+
+- intent: SportsType
+  examples: |
+   - which type of sports competitions are organized?
+   - which type of sports are played?
+   - Can you give me which sports competitions are organized?
+
+
+
+- intent: SportsInstruments
+  examples: |
+    - which sports equipment is available in college?
+    - Do the sports instruments are available?
+    - sports equipments
+
+
+- intent: SportsMatches
+  examples: |
+    - Does the sports matches are held with other college students?
+    - Does the sports matches are held with other colleges?
+
+- intent: SportAcademic
+  examples: |
+    - Is sports compulsory in academic activities?
+    - Is there any credits for sports in the academic curriculum?
+    - Is sports compulsory for students?
+
+
+
+- intent: Sports Committee
+  examples: |
+    - Does any sports committee exist?
+    - sports committee
+    - Is any sports coordinator in college?
+
+
+- intent: sports Coordinator
+  examples: |
+    - How can I participate in the sports committee?
+    - Is there any separate interview for sports coordinator?
+    - Can I participate in the sports committee?
+
+- intent: sportsFees
+  examples: |
+    - Are there any fees we have to pay for participating in sports?
+    - Does any fees required for sports participation?\
+    - sports fees
+
+- intent: sportsTime
+  examples: |
+    - what are the timings for the sports?
+    - time for the sports?
+
+- intent: SportsHoliday
+  examples: |
+    - Does the college have holidays in sports week?
+    - Do the students have holidays in sports?
+
+- intent: sportBunk
+  examples: |
+    - can students bunk the college in sports week?
+    - students can bunk the college in sports?
+
+- intent: sportMedical
+  examples: |
+    - Is any medical facility available when the student gets injured in sports?
+    - Does any medical kit is available to injured players?
+    - sports medical kit
+
+- intent: sportsWeek
+  examples: |
+    - Can you give me tentative dates for sports week?
+    - date for sports week?
+    - when the sports week is organized?
+
+- intent: sportsCoach
+  examples: |
+    - Is there a particular coach is alloted in sports for training?
+    - sports coaches are allocated for training?
+    - sports coach
+
+
+
+
+# college Basic Details
+
+- intent: College_Details
+  examples: |
+   - What makes this College special?
+   - Give me the special things about college?
+   - college special things?
+   - College Features?
+   - what are the special things about college?
+
+- intent: College1
+  examples: |
+   - what is this college proud of?
+   - What's proud about college?
+   - college proud?
+
+
+- intent: College5
+  examples: |
+   - How diverse is this campus?
+
+- intent: College6
+  examples: |
+   - what is the college bond rating?
+   - college top position?
+   - top position of this college in maharashtra government college?
+   - rank of this college in government college in maharashtra?
+
+
+- intent: College8
+  examples: |
+   - University name of this college?
+   - college belongs to which university?
+   - can I know about the university of this college?
+   - Give me the university of this college?
+
+- intent: College9
+  examples: |
+   - Where is the college located?
+   - location of the college?
+   - college area?
+   - can you give me a college location?
+   - In which area college is located?
+
+
+
+- intent: College11
+  examples: |
+   - Who is the college principal?
+   - name of college principal?
+   - college principal?
+
+- intent: College12
+  examples: |
+   - When the college is Established?
+
+
+- intent: College13
+  examples: |
+   - what about the vision and mission of this college?
+   - Vision and mission of the college?
+   - Vision of this College?
+   - mission of the college?
+   - vision/mission of geca?
+
+- intent: College14
+  examples: |
+   -  How to reach college?
+   - How to reach college by Air?
+   - How to reach college by train?
+   - How to reach college by Bus?
+
+
+
+- intent: College16
+  examples: |
+   -  How many departments in this college?
+   - Which departments are in this college?
+   - which courses are offered by this college?
+   - department name?
+
+
+- intent: College17
+  examples: |
+   - Is this College on a semester, trimester or quarter system?
+   - Is college semester wise?
+   - Is college a year?
+   - Is college a year?
+
+
+- intent: College19
+  examples: |
+   - How can I transfer to another engineering college?
+   - How can I transfer to a different college?
+
+- intent: College20
+  examples: |
+   - What tutoring services do you have?
+   - Does the college provide extra courses for students?
+   - Does the college provide any online courses to students?
+   - Which courses and certification college provides?
+
+- intent: College22
+  examples: |
+    - How do I cancel My admission from this college?
+    - Is money paid to cancel the admission?
+    - How much money to cancel the admission?
+
+
+
+- intent: College24
+  examples: |
+   - College timing?
+   - timing for the college?
+   - When the college is open?
+   - opening time for college?
+   - closing time for college?
+
+- intent: College25
+  examples: |
+   - Does the college have a Canteen Facility?
+   - Is College a Canteen?
+   - Canteen is available in college?
+   - Does the college have any facility for college?
+
+
+- intent: College26
+  examples: |
+   - Is there any criteria for attending college?
+   - Is any compulsion for lectures and classes?
+   - Is attending lectures compulsory?
+   - how many percentage attendance is required?
+
+
+- intent: College27
+  examples: |
+   - Is there any punishment for bunking a college?
+   - Is there any punishment to buncking a lecture?
+   - Is there any punishment for bunking a class?
+   - Bunking a class/lecture
+
+- intent: College28
+  examples: |
+   - Does any criteria for College Exam?
+   - How many percentage attendance is required to give the college exam?
+   - Can I give a college exam without attending lectures/classes?
+
+
+- intent: College29
+  examples: |
+   - Contact No. of College?
+   - Administrative office Contact No.
+   - Contact No. of Administrative offices.
+   - Give me the contact Number of college.
+
+
+
+- intent: College30
+  examples: |
+   - Give me an Address of GECA College?
+   - College Address.
+   - Office Address.
+   - Give me an Office Address of GECA?
+
+
+
+
+# Department Detail
+
+- intent: Department
+  examples: |
+    - Name of the Department
+    - Give me the Department Information
+
+- intent: civilD
+  examples: |
+    - Give me the civil department information
+    - Civil Department
+    - civil department
+    - Information about civil department
+    - info about civil department
+    - About civil department
+
+- intent: eleD
+  examples: |
+    - Give me the electrical department information
+    - Electrical Department
+    - electrical department
+    - Information about electrical department
+    - info about electrical department
+    - About electrical department
+
+- intent: mechD
+  examples: |
+    - Give me the mechanical department information
+    - Mechanical Department
+    - mechanical department
+    - Information about mechanical department
+    - info about mechanical department
+    - About mechanical department
+
+- intent: cseD
+  examples: |
+    - Give me the computer science department information
+    - Computer Science Department
+    - computer science department
+    - Information about computer science department
+    - info about computer science department
+    - About computer science department
+
+- intent: eTD
+  examples: |
+    - Give me the electronic & telecommunication department information
+    - Electronic & Telecommunication Department
+    - ENTC department
+    - Information about ENTC department
+    - info about ENTC department
+    - About ENTC department
+
+- intent: ITD
+  examples: |
+    - Give me the Information Technology department information
+    - IT Department
+    - IT department
+    - Information about IT department
+    - info about IT department
+    - About IT department
+
+- intent: mcaD
+  examples: |
+    - Give me the MCA department information
+    - MCA Department
+    - mca department
+    - Information about MCA department
+    - info about MCA department
+    - About MCA department
+
+- intent: mathD
+  examples: |
+    - Give me the math department information
+    - Math Department
+    - math department
+    - Information about math department
+    - info about math department
+    - About math department
+
+- intent: scienceD
+  examples: |
+    - Give me the science department information
+    - Science Department
+    - science department
+    - Information about science department
+    - info about science department
+    - About science department
+
+
+- intent: mechanicsD
+  examples: |
+    - Give me the mechanics department information
+    - Mechanics Department
+    - mechanics department
+    - Information about mechanics department
+    - info about mechanics department
+    - About mechanics department
+
+
+- intent: AboutCivil
+  examples: |
+    - Give me the Details about civil Department
+    - civil department details
+    - CIVIL DEPARTMENT DETAILS
+
+
+
+- intent: CoursesCivil
+  examples: |
+    - Course details of civil department
+    - civil course details
+
+- intent: hodCivil
+  examples: |
+    - Head of Department of civil Department
+    - HOD of civil department
+
+- intent: staffCivil
+  examples: |
+    - Civil Department Staff Name
+    - civil department staff
+
+
+- intent: labCivil
+  examples: |
+    - Give me the Name of civil lab.
+    - Name of civil lab
+    - civil lab
+
+
+- intent: AboutMechanical
+  examples: |
+    - Give me the Details about mechanical Department
+    - mechanical department details
+    - MECHANICAL DEPARTMENT DETAILS
+
+
+- intent: CoursesMechanical
+  examples: |
+    - Course details of mechanical department
+    - mechanical department course details
+
+
+- intent: hodMechanical
+  examples: |
+    - Head of Department of Mechanical Department
+    - HOD of mechanical department
+
+
+
+- intent: staffMechanical
+  examples: |
+    - Mechanical Department Staff Name
+    - mechanical department staff
+
+
+- intent: labMechanical
+  examples: |
+    - Give me the Name of mechanical lab.
+    - Name of mechanical lab
+    - mechanical lab
+
+
+- intent: AboutElectrical
+  examples: |
+    - Give me the Details about electrical Department
+    - electrical department details
+    - ELECTRICAL DEPARTMENT DETAILS
+
+
+- intent: CoursesElectrical
+  examples: |
+    - Course details of electrical department
+    - electrical course details
+
+
+- intent: hodElectrical
+  examples: |
+    - Head of Department of Electrical Department
+    - HOD of electrical department
+
+
+
+- intent: staffElectrical
+  examples: |
+    - Electrical Department Staff Name
+    - electrical department staff
+
+- intent: labElectrical
+  examples: |
+    - Give me the Name of electrical lab.
+    - Name of electrical lab
+    - electrical lab
+
+
+- intent: AboutCse
+  examples: |
+    - Give me the Details about computer science department
+    - computer science department details
+    - COMPUTER SCIENCE  DEPARTMENT DETAILS
+
+- intent: CoursesCse
+  examples: |
+    - Course details of computer science department
+    - cse course details
+
+
+- intent: hodCse
+  examples: |
+    - Head of Department of computer science Department
+    - HOD of cse department
+
+
+- intent: staffCse
+  examples: |
+    - computer science Department Staff Name
+    - cse department staff
+
+
+- intent: labCse
+  examples: |
+    - Give me the Name of computer science lab.
+    - Name of cse lab
+    - cse lab
+
+
+
+- intent: AboutEntc
+  examples: |
+    - Give me the Details about entc department
+    - entc department details
+    - ENTC DEPARTMENT DETAILS
+
+- intent: CoursesEntc
+  examples: |
+    - Course details of electronic & telecommunication department
+    - entc course details
+
+
+- intent: hodEntc
+  examples: |
+    - Head of Department of ENTC Department
+    - HOD of entc department
+
+
+- intent: staffEntc
+  examples: |
+    - Electronics & Telecommunication science Department Staff Name
+    - entc department staff
+
+
+
+- intent: labEntc
+  examples: |
+    - Give me the Name of entc lab.
+    - Name of ENTC lab
+    - electronics & telecommunication lab
+
+
+
+- intent: AboutIT
+  examples: |
+    - Give me the Details about IT Department
+    - IT department details
+    - IT DEPARTMENT DETAILS
+
+- intent: CoursesIT
+  examples: |
+    - Course details of IT department
+    - IT course details
+
+
+- intent: hodIT
+  examples: |
+    - Head of Department of IT Department
+    - HOD of IT department
+
+
+- intent: staffIT
+  examples: |
+    - IT Department Staff Name
+    - IT department staff
+
+
+
+
+- intent: labIT
+  examples: |
+    - Give me the Name of IT lab.
+    - Name of IT lab
+    - IT lab
+
+
+- intent: AboutMCA
+  examples: |
+    - Give me the Details about mca department
+    - mca  department details
+    - MCA  DEPARTMENT DETAILS
+
+- intent: CoursesMCA
+  examples: |
+    - Course details of mca department
+    - MCA course details
+
+
+- intent: hodMCA
+  examples: |
+    - Head of Department of MCA Department
+    - HOD of mca department
+
+
+- intent: labMCA
+  examples: |
+    - Give me the Name of mca lab.
+    - Name of MCA lab
+    - MCA lab
+
+
+- intent: staffMCA
+  examples: |
+    - MCA Department Staff Name
+    - mca department staff
+
+
+
+
+- intent: AboutMath
+  examples: |
+    - Give me the Details about math department
+    - math department details
+    - MATH DEPARTMENT DETAILS
+
+
+- intent: CoursesMath
+  examples: |
+    - Course details of Math department
+    - MATH course details
+
+
+
+- intent: hodMath
+  examples: |
+    - Head of Department of Math Department
+    - HOD of Math department
+
+
+
+- intent: staffMath
+  examples: |
+    - Math Department Staff Name
+    - math department staff
+
+
+
+
+- intent: labMath
+  examples: |
+    - Give me the Name of math lab.
+    - Name of Math lab
+    - MATH lab
+
+
+
+- intent: AboutScience
+  examples: |
+    - Give me the Details about science department
+    - science department details
+    - science department DETAILS
+
+- intent: CoursesScience
+  examples: |
+    - Course details of science department
+    - Science course details
+
+
+
+- intent: hodScience
+  examples: |
+    - Head of Department of Science Department
+    - HOD of science department
+
+
+- intent: staffScience
+  examples: |
+    - Science Department Staff Name
+    - science department staff
+
+
+
+- intent: labScience
+  examples: |
+    - Give me the Name of science lab.
+    - Name of science lab
+    - Science lab
+
+
+- intent: AboutMechanics
+  examples: |
+    - Give me the Details about mechanics department
+    - mechanics department details
+    - MECHANICS DEPARTMENT DETAILS
+
+
+- intent: CoursesMechanics
+  examples: |
+    - Course details of mechanics department
+    - Mechanics course details
+
+
+- intent: hodMechanics
+  examples: |
+    - Head of Department of Mechanics Department
+    - HOD of mechanics department
+
+
+
+- intent: staffMechanics
+  examples: |
+    - Mechanics Department Staff Name
+    - mechanics department staff
+
+
+- intent: labMechanics
+  examples: |
+    - Give me the Name of mechanics lab.
+    - Name of mechanics lab
+    - Mechanics lab
+
+
+
+- intent: Civil_Details
+  examples: |
+    - more info Civil Department
+    - more info civil department
+    - more info CIVIL DEPARTMENT
+
+
+- intent: ele_Details
+  examples: |
+    - more info Electrical Department
+    - more info electrical department
+
+
+
+- intent: Mech_Details
+  examples: |
+    - more info Mechanical Department
+    - more info mech department
+    - more info MECH DEPARTMENT
+
+- intent: CSE_Details
+  examples: |
+    - more info computer science department
+    - more info cse department
+    - more info CSE DEPARTMENT
+
+
+- intent: ET_Details
+  examples: |
+    - more info electronics & telecommunication
+    - more info entc department
+    - more info ENTC Department
+
+
+- intent: IT_Details
+  examples: |
+    - more info Information Technology Department
+    - more info INFORMATION TECHNOLOGY DEPARTMENT
+    - more info IT department
+
+
+- intent: MCA_Details
+  examples: |
+    - more info MCA Department
+    - more info mca department
+
+
+
+- intent: Science_Details
+  examples: |
+    - more info Science Department
+    - more info science department
+    - more info Science Department
+
+
+- intent: Math_Details
+  examples: |
+    - more info Math Department
+    - more info mathematical department
+    - more info MATH Department
+
+
+- intent: Mechanics_Details
+  examples: |
+    - more info Mechanics Department
+    - more info mechanics department
+
+
+  #academics intents
+- intent: username
+  examples: |
+    - my username is [BE18S05F006]{"entity":"uname", "value":"BE18S05F006"}
+    - my uname is [BE18S05F009]{"entity":"uname", "value":"BE18S05F0069"}
+    - my username is [BE17S05F010]{"entity":"uname", "value":"BE17S05F010"}
+    - [BE16F05F010]{"entity":"uname", "value":"BE16F05F010"}
+
+- intent: password
+  examples: |
+    - my password is [mugdha]{"entity":"mugdha"}
+    - [7743803718]{"entity":"passwd"}
+
+
+
+- intent: admissiondetails
+  examples: |
+    - admisssion details
+    - first
+
+- intent: student_details
+  examples: |
+    - student details
+    - details
+    - student
+    - my details
+    - detail info
+    - general info
+    - information
+
+- intent: courseregistration
+  examples: |
+    - course registration
+    - 1
+    - first
+
+- intent: newlogin
+  examples: |
+    - login
+    - login again
+    - new user
+    - new login
+    - new sign up
+
+  #button intents
+- intent: academics
+  examples: |
+    - I want academic information
+    - about academics
+    - academics
+
+
+- intent: TrainingandPlacement
+  examples: |
+    - Training and placement
+    - Tnp
+    - Placement Info
+
+
+- intent: library
+  examples: |
+    - library information
+    - lib info
+    - Library
+
+- intent: examination
+  examples: |
+    - examination
+    - examination details
+    - exam details
+    - exam information
+
+- intent: sports
+  examples: |
+    - Sports
+    - Sports infomation
+    - college sports
+
+- intent: gym
+  examples: |
+    - gym
+    - gym infomation
+    - college gym
+
+- intent: canteen
+  examples: |
+    - canteen
+    - canteen infomation
+    - college canteen
+
+- intent: Hostel
+  examples: |
+    - hostel
+    - hostel infomation
+    - college hostel
+
+- intent: collegedetailsgeneral
+  examples: |
+    - general information about college
+    - college infomation
+
+- intent: Departmentdetails
+  examples: |
+    - department details
+    - department infomation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

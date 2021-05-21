@@ -1,0 +1,865 @@
+version: "2.0"
+
+stories:
+
+#start end greet stories
+- story: happy welcome path
+  steps:
+  - intent: start
+  - action: utter_start
+  - action: utter_next
+
+- story: happy end path
+  steps:
+  - intent: end
+  - action: utter_end
+
+
+
+#remaining Content
+- story: admission info path
+  steps:
+  - intent: admission_enquiry
+  - action: utter_admission_enquiry
+  - intent: visit_tpo
+  - action: action_admission
+
+- story: student section
+  steps:
+  - intent: student_section
+  - action: utter_student_section
+  - intent: visit_tpo
+  - action: action_studentsection
+
+
+- story: scholarship info path
+  steps:
+  - intent: scholarship_enquiry
+  - action: utter_scholarship_enquiry
+  - intent: visit_tpo
+  - action: action_scholarship
+
+- story: education loan info path
+  steps:
+  - intent: educationloan_enquiry
+  - action: utter_educationloan_enquiry
+  - intent: visit_tpo
+  - action: action_educationloan
+
+
+- story: happy tpo info path
+  steps:
+  - intent: more_detail_traning
+  - action: utter_more_detail_traning
+  - intent: visit_tpo
+  - action: action_tpo
+
+- story: upcomming campus url
+  steps:
+  - intent: upcomimg_campus_details
+  - action: utter_upcomimg_campus_details
+  - intent: visit_tpo
+  - action: action_tpo
+
+- story: previous training details url
+  steps:
+  - intent: prev_traning_details
+  - action: utter_prev_traning_details
+  - intent: visit_tpo
+  - action: action_tpo
+
+- story: placement record path 2013 14 url
+  steps:
+    - intent: placement_records
+    - action: utter_placement_records
+    - intent: placement_record_of_2013_14
+    - action: place_rec_third
+
+
+- story:  placement record path 2014 15 url
+  steps:
+    - intent: placement_records
+    - action: utter_placement_records
+    - intent: placement_record_of_2014_15
+    - action: placement_record_fourthfifth
+
+- story:  placement record path 2015 16 url
+  steps:
+    - intent: placement_records
+    - action: utter_placement_records
+    - intent: placement_record_of_2015_16
+    - action: place_recordOf_fifteensixteen
+
+- story: placement record path 2016 17 url
+  steps:
+    - intent: placement_records
+    - action: utter_placement_records
+    - intent: placement_record_of_2016_17
+    - action: placement_recordOf_serVenteen
+
+- story:  placement record path 2017 18 url
+  steps:
+    - intent: placement_records
+    - action: utter_placement_records
+    - intent: placement_record_of_2017_18
+    - action: placeme_record_lastofYear
+
+
+
+- story: happy tpo information path
+  steps:
+  - intent: tpo_information
+  - action: utter_tpoinfo
+  - intent: tpo_contact
+  - action: utter_tpocontact
+  - intent: tpo_meet
+  - action: utter_tpomeet
+  - intent: any_other_than_tpo
+  - action: utter_any_other_than_tpo
+
+- story: happy placement information path
+  steps:
+  - intent: placememt_information
+  - action: utter_placememt_information
+  - intent: main_recruiters
+  - action: utter_main_recruiters
+  - intent: placement_MNC
+  - action: utter_placement_MNC
+  - intent: placement_non_core_branch
+  - action: utter_placement_non_core_branch
+  - intent: placement_core_branch
+  - action: utter_placement_core_branch
+  - intent: maximum_package
+  - action: utter_maximum_package
+
+
+- story: happy traning information path
+  steps:
+  - intent: traning_placement
+  - action: utter_traning_placement
+  - intent: registration_traning
+  - action: utter_registration_traning
+  - intent: traning_fees_inquire
+  - action: utter_traning_fees_inquire
+  - intent: time_inquire
+  - action: utter_time_inquire
+  - intent: certification_of_traning
+  - action: utter_certification_of_traning
+  - intent: event_organize_by_MNC
+  - action: utter_event_organize_by_MNC
+
+
+
+- story: happy placement queries path cse
+  steps:
+    - intent: quries_regarding_placement
+    - action: utter_quries_regarding_placement
+    - intent: computer_science
+    - action: utter_computer_science
+
+- story: happy placement queries path it
+  steps:
+    - intent: quries_regarding_placement
+    - action: utter_quries_regarding_placement
+    - intent: info_technology
+    - action: utter_info_technology
+
+- story: happy placement queries path me
+  steps:
+    - intent: quries_regarding_placement
+    - action: utter_quries_regarding_placement
+    - intent: mech_engineering
+    - action: utter_mech_engineering
+
+- story: happy placement queries path civil
+  steps:
+    - intent: quries_regarding_placement
+    - action: utter_quries_regarding_placement
+    - intent: civil_engineering
+    - action: utter_civil_engineering
+
+- story: happy placement queries path electrical
+  steps:
+    - intent: quries_regarding_placement
+    - action: utter_quries_regarding_placement
+    - intent: electrical_engineering
+    - action: utter_electrical_engineering
+
+- story: happy placement queries path electronics
+  steps:
+    - intent: quries_regarding_placement
+    - action: utter_quries_regarding_placement
+    - intent: electronic_engineering
+    - action: utter_electronic_engineering
+
+
+#lirary Story
+
+- story: Library
+  steps:
+    - intent: Lib1
+    - action: utter_LibrianName
+    - intent: Lib2
+    - action: utter_BookDatabase
+    - intent: Lib3
+    - action: utter_BookType
+    - intent: Lib4
+    - action: utter_libBarcode
+    - intent: Lib5
+    - action: utter_LibTime
+    - intent: Lib6
+    - action: utter_LibLocation
+    - intent: Lib7
+    - action: utter_LibFacility
+    - intent: Lib8
+    - action: utter_LibDownload
+    - intent: Lib9
+    - action: utter_OnlineAccess
+    - intent: Lib10
+    - action: utter_BookIssue
+    - intent: Lib11
+    - action: utter_classReading
+    - intent: Lib12
+    - action: utter_UploadBook
+    - intent: Lib13
+    - action: utter_LibDepartment
+    - intent: Lib14
+    - action: utter_onlineBook
+    - intent: Lib15
+    - action: utter_studentLib
+    - intent: Lib16
+    - action: utter_FacultyTime
+    - intent: Lib17
+    - action: utter_findJA
+    - intent: Lib18
+    - action: utter_requestBook
+    - intent: Lib19
+    - action: utter_RCL
+    - intent: Lib20
+    - action: utter_LibNo
+    - intent: Lib21
+    - action: utter_LibInternet
+    - intent: Lib22
+    - action: utter_NewsPaper
+    - intent: Lib23
+    - action: utter_dueDate
+    - intent: Lib24
+    - action: utter_RenewBook
+    - intent: Lib25
+    - action: utter_guestLib
+    - intent: Lib26
+    - action: utter_LibHour
+    - intent: Lib27
+    - action: utter_LibEmail
+    - intent: Lib28
+    - action: utter_LibStudyRoom
+    - intent: Lib29
+    - action: utter_LibResource
+    - intent: Lib30
+    - action: utter_CheckOutBook
+    - intent: Lib31
+    - action: utter_LibRegistration
+    - intent: Lib32
+    - action: utter_bookLoc
+    - intent: Lib33
+    - action: utter_LibEntry
+    - intent: Lib34
+    - action: utter_ExtraPay
+    - intent: Lib35
+    - action: utter_LibCard
+    - intent: Lib36
+    - action: utter_CardLoss
+    - intent: Lib37
+    - action: utter_VisitLab
+    - intent: Lib38
+    - action: utter_borrowBook
+    - intent: Lib39
+    - action: utter_RequestMaterial
+    - intent: Lib40
+    - action: utter_returnBook
+    - intent: mech1
+    - action: utter_mech1
+    - intent: civil
+    - action: utter_civil
+    - intent: electrical
+    - action: utter_electrical
+    - intent: cse1
+    - action: utter_cse1
+    - intent: entc1
+    - action: utter_entc1
+
+
+#Hostel story
+- story:
+  steps:
+    - intent: Hostel
+    - action: utter_Hostel
+    - intent: Hostel1
+    - action: utter_medical
+    - intent: Hostel2
+    - action: utter_HosName
+    - intent: Hostel3
+    - action: utter_hosFee
+    - intent: Hostel4
+    - action: utter_both
+    - intent: Hostel5
+    - action: utter_skillcourse
+    - intent: Hostel6
+    - action: utter_covid
+    - intent: Hostel7
+    - action: utter_fitness
+    - intent: Hostel8
+    - action: utter_ragging
+    - intent: Hostel9
+    - action: utter_visitCampus
+    - intent: Hostel10
+    - action: utter_RW
+    - intent: Hostel11
+    - action: utter_capacity
+    - intent: Hostel12
+    - action: utter_AC
+    - intent: Hostel13
+    - action: utter_allotHostel
+    - intent: Hostel14
+    - action: utter_accHostel
+    - intent: Hostel15
+    - action: utter_SHCapacity
+    - intent: Hostel16
+    - action: utter_SepMess
+    - intent: Hostel17
+    - action: utter_infrastructure
+    - intent: Hostel18
+    - action: utter_VisitHome
+    - intent: Hostel19
+    - action: utter_raggingHostel
+    - intent: Hostel20
+    - action: utter_VecHostel
+    - intent: Hostel21
+    - action: utter_secHostel
+    - intent: Hostel22
+    - action: utter_HelplineHostel
+    - intent: Hostel23
+    - action: utter_hosLoc
+    - intent: Hostel24
+    - action: utter_ResWarden
+    - intent: Hostel25
+    - action: utter_timmingMess
+    - intent: Hostel26
+    - action: utter_RentMess
+    - intent: Hostel27
+    - action: utter_hosATM
+    - intent: Hostel28
+    - action: utter_studyRoom
+    - intent: Hostel29
+    - action: utter_wifiHostel
+    - intent: Hostel30
+    - action: utter_HostelHygenic
+    - intent: Hostel31
+    - action: utter_girlHostel
+    - intent: Hostel32
+    - action: utter_boysHostel
+    - intent: Hostel33
+    - action: utter_Hostelf
+    - intent: Hostel34
+    - action: utter_messFood
+    - intent: Hostel35
+    - action: utter_foodChart
+    - intent: Hostel36
+    - action: utter_mobile
+    - intent: Hostel37
+    - action: utter_parent
+
+- story: exam path
+  steps:
+    - intent: exam
+    - action: utter_exam
+- story: CSE path
+  steps:
+    - intent: CSE
+    - action: utter_CSE
+- story: FE-CSE exam path
+  steps:
+    - intent: FE_CSE
+    - action: utter_FE_CSE
+- story: SE-CSE exam path
+  steps:
+    - intent: SE_CSE
+    - action: utter_SE_CSE
+- story: TE-CSE exam path
+  steps:
+    - intent: TE_CSE
+    - action: utter_TE_CSE
+- story: BE-CSE exam path
+  steps:
+    - intent: BE_CSE
+    - action: utter_BE_CSE
+
+- story: IT exam path
+  steps:
+    - intent: IT
+    - action: utter_IT
+- story: FE-IT exam path
+  steps:
+    - intent: FE_IT
+    - action: utter_FE_IT
+- story: SE-IT exam path
+  steps:
+    - intent: SE_IT
+    - action: utter_SE_IT
+- story: TE-IT exam path
+  steps:
+    - intent: TE_IT
+    - action: utter_TE_IT
+- story: BE-IT exam path
+  steps:
+    - intent: BE_IT
+    - action: utter_BE_IT
+
+- story: ENTC exam path
+  steps:
+    - intent: ENTC
+    - action: utter_ENTC
+- story: FE-ENTC exam path
+  steps:
+    - intent: FE_ENTC
+    - action: utter_FE_ENTC
+- story: SE-ENTC exam path
+  steps:
+    - intent: SE_ENTC
+    - action: utter_SE_ENTC
+- story: TE-ENTC exam path
+  steps:
+    - intent: TE_ENTC
+    - action: utter_TE_ENTC
+- story: BE-ENTC exam path
+  steps:
+    - intent: BE_ENTC
+    - action: utter_BE_ENTC
+
+- story: ELE exam path
+  steps:
+    - intent: ELE
+    - action: utter_ELE
+- story: FE-ELE exam path
+  steps:
+    - intent: FE_ELE
+    - action: utter_FE_ELE
+- story: SE-ELE exam path
+  steps:
+    - intent: SE_ELE
+    - action: utter_SE_ELE
+- story: TE-ELE exam path
+  steps:
+    - intent: TE_ELE
+    - action: utter_TE_ELE
+- story: BE-ELE exam path
+  steps:
+    - intent: BE_ELE
+    - action: utter_BE_ELE
+
+- story: MECH exam path
+  steps:
+    - intent: MECH
+    - action: utter_MECH
+- story: FE-MECH exam path
+  steps:
+    - intent: FE_MECH
+    - action: utter_FE_MECH
+- story: SE-MECH exam path
+  steps:
+    - intent: SE_MECH
+    - action: utter_SE_MECH
+- story: TE-MECH exam path
+  steps:
+    - intent: TE_MECH
+    - action: utter_TE_MECH
+- story: BE-MECH exam path
+  steps:
+    - intent: BE_MECH
+    - action: utter_BE_MECH
+
+- story: CSL exam path
+  steps:
+    - intent: CSL
+    - action: utter_CSL
+- story: FE-CSL exam path
+  steps:
+    - intent: FE_CSL
+    - action: utter_FE_CSL
+- story: SE-CSL exam path
+  steps:
+    - intent: SE_CSL
+    - action: utter_SE_CSL
+- story: TE-CSL exam path
+  steps:
+    - intent: TE_CSL
+    - action: utter_TE_CSL
+- story: BE-CSL exam path
+  steps:
+    - intent: BE_CSL
+    - action: utter_BE_CSL
+
+- story: end path
+  steps:
+    - intent: end
+    - action: utter_end
+
+
+
+# College Gym Story
+
+- story: College Gym
+  steps:
+    - intent: CollegeGym
+    - action: utter_CollegeGym
+    - intent: GymFees
+    - action: utter_GymFees
+    - intent: GymJoin
+    - action: utter_GymJoin
+    - intent: GymAway
+    - action: utter_GymAway
+    - intent: GymTime
+    - action: utter_GymTime
+    - intent: GymRegistration
+    - action: utter_GymRegistration
+    - intent: GymEquipment
+    - action: utter_GymEquipment
+    - intent: GymMachine
+    - action: utter_GymMachine
+    - intent: GymCleaning
+    - action: utter_GymCleaning
+    - intent: WeighingMachine
+    - action: utter_WeighingMachine
+    - intent: GymTrainer
+    - action: utter_GymTrainer
+    - intent: GymInstruction
+    - action: utter_GymInstruction
+    - intent: GymMember
+    - action: utter_GymMember
+    - intent: GymYoga
+    - action: utter_GymYoga
+    - intent: GymExtension
+    - action: utter_GymExtension
+
+# College Canteenstory
+- story: College_Canteen
+  steps:
+    - intent: College_Canteen
+    - action: utter_College_Canteen
+    - intent: CF
+    - action: utter_CFacility
+    - intent: services
+    - action: utter_Cservices
+    - intent: feature
+    - action: utter_Cfeature
+    - intent: food
+    - action: utter_Food
+    - intent: CTiming
+    - action: utter_CanteenTiming
+    - intent: CLocation
+    - action: utter_location
+
+
+# College sport story
+
+- story:
+  steps:
+    - intent: CollegeSports
+    - action: utter_CollegeSports
+    - intent: NationalSport
+    - action: utter_NationalSport
+    - intent: sportParticipation
+    - action: utter_sportParticipation
+    - intent: sportsGround
+    - action: utter_sportsGround
+    - intent: sportsOther
+    - action: utter_sportsOther
+    - intent: SportsType
+    - action: utter_SportsType
+    - intent: Indoor
+    - action: utter_Indoor
+    - intent: Outdoor
+    - action: utter_Outdoor
+    - intent: SportsInstruments
+    - action: utter_SportsInstruments
+    - intent: SportsMatches
+    - action: utter_SportsMatches
+    - intent: SportAcedemic
+    - action: utter_SportAcademic
+    - intent: SportsCommitee
+    - action: utter_SportsCommitee
+    - intent: sportCoodinator
+    - action: utter_sportCoodinator
+    - intent: sportsFees
+    - action: utter_sportsFees
+    - intent: sportsTime
+    - action: utter_sportsTime
+    - intent: SportsHoliday
+    - action: utter_SportsHoliday
+    - intent: sportBunk
+    - action: utter_sportBunk
+    - intent: sportMedical
+    - action: utter_sportMedical
+    - intent: sportsWeek
+    - action: utter_sportsWeek
+    - intent: sportsCoach
+    - action: utter_sportsCoach
+
+# College Details story
+- story: College_Details
+  steps:
+    - intent: College_Details
+    - action: utter_CollegeSpecial
+    - intent: College1
+    - action: utter_CollegeProud
+    - intent: College2
+    - action: utter_CampusDiverse
+    - intent: College6
+    - action: utter_collegeRating
+    - intent: College8
+    - action: utter_University
+    - intent: College9
+    - action: utter_collegeLocation
+    - intent: College10
+    - action: utter_Principal
+    - intent: College12
+    - action: utter_College_establish
+    - intent: College13
+    - action: utter_VM
+    - intent: College14
+    - action: utter_reach
+    - intent: College16
+    - action: utter_collegeDept
+    - intent: College17
+    - action: utter_clPattern
+    - intent: College19
+    - action: utter_TransferCollege
+    - intent: College20
+    - action: utter_Tuto
+    - intent: College22
+    - action: utter_AddCancel
+    - intent: College24
+    - action: utter_CollegeTime
+    - intent: College25
+    - action: utter_Canteen
+    - intent: College26
+    - action: utter_attendence
+    - intent: College27
+    - action: utter_collegeBunk
+    - intent: College28
+    - action: utter_CollegeExam
+    - intent: College29
+    - action: utter_CollegeContact
+    - intent: College30
+    - action: utter_CollegeAddress
+    - intent: Air
+    - action: utter_Air
+    - intent: Train
+    - action: utter_Train
+    - intent: Bus
+    - action: utter_Bus
+
+# Department story
+- story: Department_Information
+  steps:
+    - intent: Department
+    - action: utter_Department
+    - intent: civilD
+    - action: utter_civilD
+    - intent: eleD
+    - action: utter_eleD
+    - intent: mechD
+    - action: utter_mechD
+    - intent: cseD
+    - action: utter_cseD
+    - intent: entcD
+    - action: utter_eTD
+    - intent: ITD
+    - action: utter_ITD
+    - intent: mcaD
+    - action: utter_mcaD
+    - intent: mathD
+    - action: utter_mathD
+    - intent: scienceD
+    - action: utter_scienceD
+    - intent: mechanicsD
+    - action: utter_mechanicsD
+    - intent: AboutCivil
+    - action: utter_AboutCivil
+    - intent: CoursesCivil
+    - action: utter_CoursesCivil
+    - intent: hodCivil
+    - action: utter_hodCivil
+    - intent: staffCivil
+    - action: utter_staffCivil
+    - intent: labCivil
+    - action: utter_labCivil
+    - intent: AboutMechanical
+    - action: utter_AboutMechanical
+    - intent: CoursesMechanical
+    - action: utter_CoursesMechanical
+    - intent: hodMechanical
+    - action: utter_hodMechanical
+    - intent: staffMechanical
+    - action: utter_staffMechanical
+    - intent: labMechanical
+    - action: utter_labMechanical
+    - intent: AboutElectrical
+    - action: utter_AboutElectrical
+    - intent: CoursesElectrical
+    - action: utter_CoursesElectrical
+    - intent: hodElectrical
+    - action: utter_hodElectrical
+    - intent: staffElectrical
+    - action: utter_staffElectrical
+    - intent: labElectrical
+    - action: utter_labElectrical
+    - intent: AboutCse
+    - action: utter_AboutCse
+    - intent: CoursesCse
+    - action: utter_CoursesCse
+    - intent: hodCse
+    - action: utter_hodCse
+    - intent: staffCse
+    - action: utter_staffCse
+    - intent: labCse
+    - action: utter_labCse
+    - intent: AboutEntc
+    - action: utter_AboutEntc
+    - intent: CoursesEntc
+    - action: utter_CoursesEntc
+    - intent: hodEntc
+    - action: utter_hodEntc
+    - intent: staffEntc
+    - action: utter_staffEntc
+    - intent: labEntc
+    - action: utter_labEntc
+    - intent: AboutIT
+    - action: utter_AboutIT
+    - intent: CoursesIT
+    - action: utter_CoursesIT
+    - intent: hodIT
+    - action: utter_hodIT
+    - intent: staffIT
+    - action: utter_staffIT
+    - intent: labIT
+    - action: utter_labIT
+    - intent: AboutMCA
+    - action: utter_AboutMCA
+    - intent: CoursesMCA
+    - action: utter_CoursesMCA
+    - intent: hodMCA
+    - action: utter_hodMCA
+    - intent: staffMCA
+    - action: utter_staffMCA
+    - intent: labMCA
+    - action: utter_labMCA
+    - intent: AboutMath
+    - action: utter_AboutMath
+    - intent: CoursesMath
+    - action: utter_CoursesMath
+    - intent: hodMath
+    - action: utter_hodMath
+    - intent: staffMath
+    - action: utter_staffMath
+    - intent: labMath
+    - action: utter_labMath
+    - intent: AboutScience
+    - action: utter_AboutScience
+    - intent: CoursesScience
+    - action: utter_CoursesScience
+    - intent: hodScience
+    - action: utter_hodScience
+    - intent: staffScience
+    - action: utter_staffScience
+    - intent: labScience
+    - action: utter_labScience
+    - intent: AboutMechanics
+    - action: utter_AboutMechanics
+    - intent: CoursesMechanics
+    - action: utter_CoursesMechanics
+    - intent: hodMechanics
+    - action: utter_hodMechanics
+    - intent: staffMechanics
+    - action: utter_staffMechanics
+    - intent: labMechanics
+    - action: utter_labMechanics
+
+
+- story: happy play video path
+  steps:
+
+    - intent: Civil_Details
+    - action: action_Civil_Details
+    - intent: ele_Details
+    - action: action_ele_Details
+    - intent: Mech_Details
+    - action: action_Mech_Details
+    - intent: CSE_Details
+    - action: action_CSE_Details
+    - intent: ET_Details
+    - action: action_ET_Details
+    - intent: IT_Details
+    - action: action_IT_Details
+    - intent: MCA_Details
+    - action: action_MCA_Details
+    - intent: Science_Details
+    - action: action_Science_Details
+    - intent: Math_Details
+    - action: action_Math_Details
+    - intent: Mechanics_Details
+    - action: action_Mechanics_Details
+
+  #intial buttons story
+
+- story: happy input path
+  steps:
+
+    - intent: TrainingandPlacement
+    - action: utter_TrainingandPlacement
+    - intent: library
+    - action: utter_library
+    - intent: examination
+    - action: utter_examination
+    - intent: sports
+    - action: utter_sports
+    - intent: gym
+    - action: utter_gym
+    - intent: canteen
+    - action: utter_canteen
+    - intent: Hostel
+    - action: utter_Hostel1
+    - intent: collegedetailsgeneral
+    - action: utter_collegedetailsgeneral
+    - intent: Departmentdetails
+    - action: utter_Departmentdetails
+
+  #academics stories
+
+- story: academics path
+  steps:
+    - intent: academics
+    - action: utter_login
+    - action: user_details_form
+    - active_loop: user_details_form
+
+- story: students details
+  steps:
+    - intent: student_details
+    - action: action_StudentDetails
+
+- story: course registration
+  steps:
+    - intent: courseregistration
+    - action: action_CourseRegistration
+    - action: courseregistration_form
+    - active_loop: courseregistration_form
+
+
+- story: new login story
+  steps:
+    - intent: newlogin
+    - action: action_Nullify
+    - action: utter_login
+    - action: user_details_form
+    - active_loop: user_details_form
