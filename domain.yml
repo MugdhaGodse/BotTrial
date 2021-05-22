@@ -1,0 +1,1710 @@
+version: "2.0"
+
+intents:
+  - start
+  - email
+  - tpo_information
+  - tpo_contact
+  - tpo_meet
+  - any_other_than_tpo
+  - placememt_information
+  - main_recruiters
+  - placement_MNC
+  - placement_non_core_branch
+  - placement_core_branch
+  - maximum_package
+  - upcomimg_campus_details
+  - traning_placement
+  - traning_fees_inquire
+  - time_inquire
+  - registration_traning
+  - certification_of_traning
+  - event_organize_by_MNC
+  - prev_traning_details
+  - more_detail_traning
+  - quries_regarding_placement
+  - computer_science
+  - info_technology
+  - mech_engineering
+  - civil_engineering
+  - electrical_engineering
+  - electronic_engineering
+  - placement_records
+  - placement_record_of_2013_14
+  - placement_record_of_2014_15
+  - placement_record_of_2015_16
+  - placement_record_of_2016_17
+  - placement_record_of_2017_18
+  - exam
+  - CSE
+  - IT
+  - ENTC
+  - ELE
+  - MECH
+  - CSL
+  - FE_CSE
+  - SE_CSE
+  - TE_CSE
+  - BE_CSE
+  - FE_IT
+  - SE_IT
+  - TE_IT
+  - BE_IT
+  - FE_ENTC
+  - SE_ENTC
+  - TE_ENTC
+  - BE_ENTC
+  - FE_ELE
+  - SE_ELE
+  - TE_ELE
+  - BE_ELE
+  - FE_MECH
+  - SE_MECH
+  - TE_MECH
+  - BE_MECH
+  - FE_CSL
+  - SE_CSL
+  - TE_CSL
+  - BE_CSL
+  - visit_tpo
+  - email
+  - admission_enquiry
+  - student_section
+  - scholarship_enquiry
+  - educationloan_enquiry
+  - end
+  - academics
+  - admissiondetails
+  - student_details
+  - courseregistration
+  - newlogin
+  - CoursesMechanics
+  - username:
+      use_entities:
+        - uname
+  - password:
+      use_entities:
+        - passwd
+  - optsub:
+      use_entities:
+        - optsub
+  - sender_email:
+      use_entities:
+        - sender_email
+  - sender_name:
+      use_entities:
+        - sender_name
+  - sender_message:
+      use_entities:
+        - sender_message
+
+entities:
+  - uname
+  - passwd
+  - optsub
+  - sender_email
+  - sender_name
+  - sender_message
+
+slots:
+  sender_email:
+    type: text
+  sender_name:
+    type: text
+  sender_message:
+    type: text
+  uname:
+    type: text
+  passwd:
+    type: text
+  optsub:
+    type: text
+
+
+
+forms:
+  email_form:
+    sender_email:
+      - type: from_text
+        entity: sender_email
+    sender_name:
+      - type: from_text
+        entity: sender_name
+    sender_message:
+      - type: from_text
+        entity: sender_message
+
+  user_details_form:
+    uname:
+      - type: from_text
+        entity: uname
+    passwd:
+      - type: from_text
+        entity: passwd
+
+  courseregistration_form:
+    optsub:
+      - type: from_text
+        entity: optsub
+
+
+
+responses:
+  utter_start:
+  - text: "👋Hello!\n I am a bot powered by GECA! "
+
+  utter_next:
+  - text: "\n How can I help you? 😊"
+    buttons:
+      - title: "Academics"
+        payload: "/academics"
+      - title: "Training and Placement"
+        payload: '/TrainingandPlacement'
+      - title: "Examination"
+        payload: '/examination'
+      - title: "Library"
+        payload: '/library'
+      - title: "Sports"
+        payload: '/sports'
+      - title: "Gym"
+        payload: '/gym'
+      - title: "Canteen"
+        payload: '/canteen'
+      - title: "Hostel"
+        payload: '/Hostel'
+      - title: "General College Details"
+        payload: '/collegedetailsgeneral'
+      - title: "Department details"
+        payload: '/Departmentdetails'
+
+
+  utter_end:
+  - text: "It's my pleasure😊\nHappy to help you ❤"
+
+  utter_ask_sender_email:
+  - text: Please Enter your email address
+
+  utter_ask_sender_name:
+  - text: Enter your name
+
+  utter_ask_sender_message:
+  - text: Enter your message
+
+#remaining Content
+
+  utter_admission_enquiry:
+  - text: "Yes Sure 😍😍"
+    buttons:
+      - title: "Click Here"
+        payload: "/visit_tpo"
+
+
+  utter_student_section:
+  - text: "You can contact Student Section or Visit below link: 👇"
+    buttons:
+      - title: "Click Here"
+        payload: "/visit_tpo"
+
+  utter_scholarship_enquiry:
+  - text: "You can get Scholarship for more details visit below link: 👇"
+    buttons:
+      - title: "Click Here"
+        payload: "/visit_tpo"
+
+  utter_educationloan_enquiry:
+  - text: "You can get Education Loan trough your respective Banks our college always appreciate to you and support you 😊😊  for more details you can visit below link: 👇"
+    buttons:
+      - title: "Click Here"
+        payload: "/visit_tpo"
+
+#tpo
+  utter_more_detail_traning:
+  - text: "you can contact TPO students coordinator or visit this one 👇 :"
+    buttons:
+      - title: "Click Here"
+        payload: "/visit_tpo"
+
+  utter_prev_traning_details:
+  - text: "from here 👇 you can get details of it:"
+    buttons:
+      - title: "Click Here"
+        payload: "/visit_tpo"
+
+  utter_upcomimg_campus_details:
+  - text: "you can contact TPO students coordinator or click below 👇:"
+    buttons:
+      - title: "Click Here "
+        payload: "/visit_tpo"
+
+  utter_tpoinfo:
+  - text: "prof. Shailesh Ambekar is TPO of our college."
+
+  utter_tpocontact:
+  - text: "you can contact them on mobile no or drop a mail :
+           contact no:9422712321
+           Telephone No:240-2366357
+           email-id:tpo@geca.ac.in"
+
+  utter_tpomeet:
+  - text: "yes, you can meet them in college time. 10.30am to 5.00pm"
+
+  utter_any_other_than_tpo:
+  - text: "you can contact any of office coordinator:
+            Name:Patel Shoab Email-id:patelshoab77@gmail.com contact.no:7304477897
+            Name:Pradhyumna Jakate Email-id:pradhyumnaj@gmail.com contact.no:8408972460
+            Name:Onkar Navekar Email-id:onkarnavekar3@gmail.com  contact.no:8857990750
+            Name:Sahil Bhalerao Email-id:sahilbhalerao0204@gmail.com contact.no:7719066137"
+
+  utter_placememt_information:
+  - text: "we provide 100% placement"
+
+  utter_main_recruiters:
+  - text: " we have main recruiters like - Tata Consultancy Services, Larsen and Turbo,TCS Digital ,3DPLM Software,
+           		Lodha Group ,Grind Master ,Reliance Industries,Siemens Ltd.,CG Power and
+           Ind soln Ltd,Bizsense Solutions,Eumentis Cloud, Softlink Solution, ElasticRun etc."
+
+  utter_placement_MNC:
+  - text: "yes we have it"
+
+  utter_placement_non_core_branch:
+  - text: "yes we have good companies with good packages for non-core branches too.."
+
+  utter_placement_core_branch:
+  - text: "yes we have good companies with good packages for core branches too.."
+
+  utter_maximum_package:
+  - text: "according to our records and students performance we provide maximum package between 7 to 10 lack per annum."
+
+  utter_traning_placement:
+  - text: "Our college provide training and conduct workshop,events for placement preparation"
+
+  utter_traning_fees_inquire:
+  - text: "workshops and training are provides from college so you not need to pay anything."
+
+  utter_time_inquire:
+  - text: "you are allocate separate time for training or workshop"
+
+  utter_registration_traning:
+  - text: "you need to contact to your TPO student coordinator according to your branch"
+
+  utter_certification_of_traning:
+  - text: "you will not get any certificate separately but it get on your score card or added to your acedemic record"
+
+  utter_event_organize_by_MNC:
+  - text: "we organize hackathons and competitions which are conducted by companies"
+
+  utter_quries_regarding_placement:
+  - text: "Okay, don't worry we are here to help you.choose you branch.."
+    buttons:
+      - title: "Computer science and Engineering"
+        payload: "/computer_science"
+      - title: "Information Technology"
+        payload: "/info_technology"
+      - title: "Mechanical Engineering "
+        payload: "/mech_engineering"
+      - title: "Civil Engineering"
+        payload: "/civil_engineering"
+      - title: "Electrical Engineering"
+        payload: "/electrical_engineering"
+      - title: "Electronics and Telecommunication"
+        payload: "/electronic_engineering"
+
+  utter_info_technology:
+  - text: " you can contact your TPO coordinator ---> Name: Rohit Salve  contact no: xxxxxxxxx"
+
+  utter_computer_science:
+  - text: "you can contact your TPO coordinator ---> Name : Gajanan Dhotre contact no: xxxxxxxxx"
+
+  utter_mech_engineering:
+  - text: "you can contact your TPO coordinator ---> Name: xxxxxxxxx   contact no: xxxxxxxxx"
+
+  utter_civil_engineering:
+  - text: "you can contact your TPO coordinator ---> Name: xxxxxxxxx  contact no: xxxxxxxxx"
+
+  utter_electrical_engineering:
+  - text: "you can contact your TPO coordinator ---> Name: xxxxxxxxx  contact no: xxxxxxxxx"
+
+  utter_electronic_engineering:
+  - text: "you can contact your TPO coordinator ---> Name: xxxxxxxxx  contact no: xxxxxxxxx"
+
+  utter_placement_records:
+  - text: "you can get our placement records from here : choose the year :-> "
+    buttons:
+      - title: "Placement Record of 2013-14"
+        payload: "/placement_record_of_2013_14"
+      - title: "Placement Record of 2014-15"
+        payload: "/placement_record_of_2014_15"
+      - title: "Placement Record of 2015-16"
+        payload: "/placement_record_of_2015_16"
+      - title: "Placement Record of 2016-17"
+        payload: "/placement_record_of_2016_17"
+      - title: "Placement Record of 2017-18"
+        payload: "/placement_record_of_2017_18"
+
+  utter_exam:
+  - text: "Please select your branch"
+    buttons:
+      - title: "Computer Science and Engineering"
+        payload: "/CSE"
+      - title: "Information Technology"
+        payload: "/IT"
+      - title: "Electronics and Telecommunication"
+        payload: "/ENTC"
+      - title: "Electrical"
+        payload: "/ELE"
+      - title: "Mechanical"
+        payload: "/MECH"
+      - title: "Civil"
+        payload: "/CSL"
+ #CSE
+  utter_CSE:
+  - text: "Please select your Year "
+    buttons:
+      - title: "FE-CSE"
+        payload: "/FE_CSE"
+      - title: "SE-CSE"
+        payload: "/SE_CSE"
+      - title: "TE-CSE"
+        payload: "TE_CSE"
+      - title: "BE-CSE"
+        payload: "/BE_CSE"
+
+  utter_FE_CSE:
+  - text: "Your next exam will be as shown in pdf : "
+  utter_SE_CSE:
+  - text: "Your next exam will be as shown in pdf : "
+  utter_TE_CSE:
+  - text: "Your next exam will be as shown in pdf : "
+  utter_BE_CSE:
+  - text: "Your next exam will be as shown in pdf : "
+
+#IT
+  utter_IT:
+  - text: "Please select your Year "
+    buttons:
+      - title: "FE-IT"
+        payload: "/FE_IT"
+      - title: "SE-IT"
+        payload: "/SE_IT"
+      - title: "TE-IT"
+        payload: "TE_IT"
+      - title: "BE-IT"
+        payload: "/BE_IT"
+
+  utter_FE_IT:
+  - text: "Your next exam will be as shown in pdf : "
+  utter_SE_IT:
+  - text: "Your next exam will be as shown in pdf : "
+  utter_TE_IT:
+  - text: "Your next exam will be as shown in pdf : "
+  utter_BE_IT:
+  - text: "Your next exam will be as shown in pdf : "
+#ENTC
+  utter_ENTC:
+  - text: "Please select your Year "
+    buttons:
+      - title: "FE-ENTC"
+        payload: "/FE_ENTC"
+      - title: "SE-ENTC"
+        payload: "/SE_ENTC"
+      - title: "TE-ENTC"
+        payload: "TE_ENTC"
+      - title: "BE-ENTC"
+        payload: "/BE_ENTC"
+
+  utter_FE_ENTC:
+  - text: "Your next exam will be as shown in pdf : "
+  utter_SE_ENTC:
+  - text: "Your next exam will be as shown in pdf : "
+  utter_TE_ENTC:
+  - text: "Your next exam will be as shown in pdf : "
+  utter_BE_ENTC:
+  - text: "Your next exam will be as shown in pdf : "
+#ELE
+  utter_ELE:
+  - text: "Please select your Year "
+    buttons:
+      - title: "FE-ELE"
+        payload: "/FE_ELE"
+      - title: "SE-ELE"
+        payload: "/SE_ELE"
+      - title: "TE-ELE"
+        payload: "TE_ELE"
+      - title: "BE-ELE"
+        payload: "/BE_ELE"
+
+  utter_FE_ELE:
+  - text: "Your next exam will be as shown in pdf : "
+  utter_SE_ELE:
+  - text: "Your next exam will be as shown in pdf : "
+  utter_TE_ELE:
+  - text: "Your next exam will be as shown in pdf : "
+  utter_BE_ELE:
+  - text: "Your next exam will be as shown in pdf : "
+
+#MECH
+  utter_MECH:
+  - text: "Please select your Year "
+    buttons:
+      - title: "FE-MECH"
+        payload: "/FE_MECH"
+      - title: "SE-MECH"
+        payload: "/SE_MECH"
+      - title: "TE-MECH"
+        payload: "TE_MECH"
+      - title: "BE-MECH"
+        payload: "/BE_MECH"
+
+  utter_FE_MECH:
+  - text: "Your next exam will be as shown in pdf : "
+  utter_SE_MECH:
+  - text: "Your next exam will be as shown in pdf : "
+  utter_TE_MECH:
+  - text: "Your next exam will be as shown in pdf : "
+  utter_BE_MECH:
+  - text: "Your next exam will be as shown in pdf : "
+#CSL
+  utter_CSL:
+  - text: "Please select your Year "
+    buttons:
+      - title: "FE-CSL"
+        payload: "/FE_CSL"
+      - title: "SE-CSL"
+        payload: "/SE_CSL"
+      - title: "TE-CSL"
+        payload: "TE_CSL"
+      - title: "BE-CSL"
+        payload: "/BE_CSL"
+
+  utter_FE_CSL:
+  - text: "Your next exam will be as shown in pdf : "
+  utter_SE_CSL:
+  - text: "Your next exam will be as shown in pdf : "
+  utter_TE_CSL:
+  - text: "Your next exam will be as shown in pdf : "
+  utter_BE_CSL:
+  - text: "Your next exam will be as shown in pdf : "
+
+
+
+  utter_placement_record_of_2013_14:
+  - text: " here is that:-) http://tpo.geca.ac.in/PlacementRecords2013-14.aspx/"
+
+  utter_placement_record_of_2014_15:
+  - text: "here is that http://tpo.geca.ac.in/PlacementRecords2014-15.aspx/"
+
+  utter_placement_record_of_2015_16:
+  - text: "here is that http://tpo.geca.ac.in/PlacementRecords2015-16.aspx/"
+
+  utter_placement_record_of_2016_17:
+  - text: "here is that http://tpo.geca.ac.in/PlacementRecords2016-17.aspx/"
+
+  utter_placement_record_of_2017_18:
+  - text: "here is that http://tpo.geca.ac.in/PlacementRecords2017-18.aspx/"
+
+#Lirary Responses
+
+  utter_LibrianName:
+  - text: " XYZ"
+
+  utter_BookDatabase:
+  - text: " To find Database from the the  Library home page:
+            Click on Databases by Title (A-Z) (near the center of the screen). This will take you to the entire list of the  library's databases, where you will find a link to Books 24x7.
+            If you are prompted to login, use the same user name and password you use for your  classes.
+            Need more help? Contact us."
+
+
+
+  utter_BookType:
+  - text: " Varieties of publications are available.. such as Teaching and Teacher Education , Review of Educational Research.
+            British Journal of Education Technology, Studies in Higher Education."
+
+  utter_libBarcode:
+  - text: " You can find it the Library card and barcode number."
+
+
+  utter_LibTime:
+  - text: " Library opening time :- 10.30 AM
+            Library closing time. :- 5.30 PM"
+
+  utter_LibLocation:
+  - text: "Library Location :-Near the College Auditorium"
+
+  utter_LibFacility:
+  - text: " Geca library aims at providing access to its printed resources such as books and journals as well
+            as electronic journals and online database."
+
+  utter_LibDownload:
+  - text: " Yes, You can download the Books/ Pdf from the Database any time as yow want."
+
+  utter_OnlineAccess:
+  - text: " Visit to the Student Learning Resources in College website and access or download the book/pdf."
+
+  utter_BookIssue:
+  - text: " Each student can issue only Five Books on his/her account."
+
+  utter_classReading:
+  - text: " You can access your class reading books online from student learning resources.
+             or offline from college library."
+
+  utter_UploadBook:
+  - text: " Yes , you can upload or download the book online."
+
+
+  utter_LibDepartment:
+  - text: " Please Select Department..."
+    buttons:
+      - title: Mechanical Department
+        payload: "/mech1"
+      - title: Civil Department
+        payload: "/civil"
+      - title: Computer Department
+        payload: "/cse1"
+      - title: Electrical Department
+        payload: "/electrical"
+      - title: Electronic Department
+        payload: "/entc1"
+
+  utter_mech1:
+   - text: " Mechanical Department Students can visit the library on Day:- Monday. Between 10.30 am to 5.30 pm."
+
+  utter_civil:
+  - text: " Civil Department Students can visit the library on Day:- Tuesday. Between 10.30 am to 5.30 pm."
+
+  utter_cse1:
+  - text: " Computer Department Students can visit the library on Day:- Wednesday. Between 10.30 am to 5.30 pm."
+
+  utter_electrical:
+  - text: " Electrical Department Students can visit the library on Day:- Thursday. Between 10.30 am to 5.30 pm."
+
+  utter_entc1:
+  - text: " Electronic and Telecommunication Department Students can visit the library on Day:- Friday. Between 10.30 am to 5.30 pm."
+
+  utter_onlineBook:
+  - text: " Books are available both online or offline. As your comfort you can use it."
+
+
+  utter_studentLib:
+  - text: " student library time between 10.30 am to 1.00 pm
+            2.00 pm to 5.30 pm."
+
+
+  utter_FacultyTime:
+  - text: " Faculty/Teacher can visit to library any time."
+
+
+  utter_findJA:
+  - text: " Please see Journal and Articles from Student Learning resources.
+            You can access the Journal and Article."
+
+  utter_requestBook:
+  - text: " You can request a book from library by using your Library Card Id Number.
+             Book is assign to particular user using barcode."
+
+
+  utter_RCL:
+  - text: " Student, faculty, and staff may schedule an appointment with a librarian for one-on-one
+            assistance in finding relevant information for research papers."
+
+
+  utter_LibNo:
+  - text: " Library Contact No. - 9999999999"
+
+  utter_LibInternet:
+  - text: " All time Internet Facility in library."
+
+
+  utter_NewsPaper:
+  - text: " Yes Various News Papers are available for students.
+            Example:- Times, Century Old Time , Franklin Gothic"
+
+
+
+  utter_dueDate:
+  - text: " Yes, If you do not renew the book within one month then particular charges is applied."
+
+
+  utter_RenewBook:
+  - text: " It is mandatory to renew the book within the one month."
+
+
+  utter_guestLib:
+  - text: " There is no membership for the guest/visitors in the library."
+
+  utter_LibHour:
+  - text: " Library open at morning 10.30 Am.
+            close at evening 5.30 pm."
+
+
+
+  utter_LibEmail:
+  - text: " Library Email:- academics3@geca.ac.in"
+
+
+  utter_LibStudyRoom:
+  - text: "Study Room is available for all student without any reservation."
+
+
+  utter_LibResource:
+  - text: " There is a Librarian who helps in finding the resources."
+
+
+  utter_CheckOutBook:
+  - text: " Take your Library Card and the book(s) you want to check out to the Access & Instruction Desk on the first floor of the library. A staff member there will scan your card, check out the books to your account, and stamp the due dates into the books.
+          "
+
+  utter_LibRegistration:
+  - text:  " For freshers, the following items are required for Library Registration:
+             1)Clearance form from the college.
+             2)Payment receipt(s)
+             3)2 recent passport  photographs
+             4)Registration number
+             Registration is done at the beginning of each session for all students.
+            To renew your Library Registration, you need to produce:
+             1)Your old Library ticket
+             2)School fees payment receipt(s)
+             3)Confirmation of your studentship by your HOD"
+
+
+
+  utter_bookLoc:
+  - text: "To locate a book in the library, use the library's website to search for the title, author, or keyword. Once you find the book online, click on its title to access the location, call number, and status.
+           ....
+           If you want the Hard Copy of book you can visit to the Library and find the books in particular Department Rack."
+
+
+
+  utter_LibEntry:
+  - text: " It is compulsory to enter your library (id) number to software  before enter into the library and exit from the library"
+
+  utter_ExtraPay:
+  - text:  " No charge for the books."
+
+  utter_LibCard:
+  - text: " Each students gets maximum Five Library Card.You can Issue only one book from one card."
+
+
+  utter_CardLoss:
+  - text: "You may also report your card loss or stolen in person of the library. Also you can replace your library card by completing a
+            new application and bringing it(with ID and proof of address) to the library for no charge."
+
+
+  utter_VisitLab:
+  - text: " Student can visit the library Daily for study. but he/she can borrow/return books
+            only two times in per week."
+
+
+
+  utter_borrowBook:
+  - text: " Any Geca Institution staff member with a ID can apply for a library borrowers card.
+            Please complete a Borrowing Registration/Authorization form."
+
+
+
+  utter_RequestMaterial:
+  - text: " Visiting to the library in-person is not convenient, please complete an online request form.
+            Fill out as much information as possible about the article or book title you want."
+
+
+  utter_returnBook:
+  - text: " After the End Semester Exam is finish. Kindly return the Books of Library."
+
+
+#Hostel responses
+  utter_Hostel:
+  - text: "Total four Hostel in this College.."
+
+  utter_boysHostel:
+  - text: " total two boys Hostel"
+
+  utter_girlHostel:
+  - text: " total two girls hostel old and new."
+  utter_Hostelf:
+  - text: " Good Mess , Fresh Food , Wi-Fi, Canteen, CC-TV Camera."
+
+  utter_messFood:
+  - text: " Vegetarian , Good quality, hygienic, full of nutrition."
+
+  utter_foodChart:
+  - text: " Yes, it follows the food chart for Breakfast,Lunch, Evening Snacks and Dinner."
+
+  utter_mobile:
+  - text: " Yes , mobile are allow in the hostel for only study purpose"
+
+  utter_parent:
+  - text: " 6.00 am to 8.00 am and evening 6.00 pm to 9.00 pm"
+
+  utter_medical:
+  - text: " We have 24 hours. first Aid Medical facility and our nursing staff every tuesday visit to hostel"
+
+  utter_HosName:
+  - text: " A , B , C, D are the name of Hostels"
+
+  utter_hosFee:
+  - text: " for Category students hostel fee is 1650 rs. per year. and general students it is 2500 rs."
+
+  utter_both:
+  - text: " Yes Hostel is provided for both girls as well as boys."
+
+  utter_skillcourse:
+  - text: " Yes , we are providing a skill courses like yoga, meditation, soft-skills etc."
+
+  utter_covid:
+  - text: " Provision for thermal scanning, hand wash, and sanitizer is done at entry and exit point
+            and common areas. Frequent sanitization of the entire hostel, common facilities, and all points which come into
+            human contact. Wearing of face cover is compulsory for all."
+
+  utter_fitness:
+  - text: " Apart from Gym and Evening sports, we give special focus on Yoga and Meditation. These session are regularly
+            organized by the experts."
+
+  utter_ragging:
+  - text: " Ragging of student in any form is strictly prohibited within and outside the campus.
+            An anti-ragging squad is always in operation under the overall charge of the Dean."
+
+  utter_visitCampus:
+  - text: " During this period of lockdown, you can virtually visit the campus using a 360 degree view option on the college
+            website. AS soon as the lockdown is lifted, you can visit the campus on any day between 8 am to 8 pm."
+
+  utter_RW:
+  - text: " Prof. Swami sir is rector for boys hostel and Prof. Injamuri mam is rector for girls hostel."
+
+  utter_capacity:
+  - text: " The Capacity for girls is 700 and boys is 1000."
+
+  utter_AC:
+  - text: " Only the Non-AC room for Hostelers."
+
+  utter_allotHostel:
+  - text: " allotment is on the basis of the merit list of each Department."
+
+  utter_accHostel:
+  - text: " We have accommodation with common bathrooms. "
+
+  utter_SHCapacity:
+  - text: " We have the two seater, three seater rooms in hostel."
+
+  utter_SepMess:
+  - text: " Yes, Hostel has the separate mess for girls and boys."
+
+  utter_infrastructure:
+  - text: " A basic bed , study table, chairs and cupboard is provided."
+
+  utter_VisitHome:
+  - text: " For Visiting to home Parents Application is sent to the Hostel via a Fax."
+
+  utter_raggingHostel:
+  - text: " Geca is a ragging free zone in hostel as well as in Campus. The different committees have been formulated for this purpose."
+  utter_VecHostel:
+  - text: " Yes, the hosteler can keep vehicle in the hostel with the written permission from the competent authority."
+
+  utter_secHostel:
+  - text: " Security Guard, Visit of hostel, Night Attendance."
+
+  utter_HelplineHostel:
+  - text: " Hostel-HelpLine -- 9999999999"
+
+  utter_hosLoc:
+  - text: " Geca hostel is located at Geca College In-front of Civil Department."
+
+  utter_ResWarden:
+  - text: " Yes, we have experienced full-time residential warden for each hostel."
+
+  utter_timmingMess:
+  - text: " Breakfast time = 8.00 am to 9.30 am.
+            Lunch time = 10.30 am to 1.30 pm.
+            Dinner time is 7.70 pm to 10.00 pm."
+
+  utter_RentMess:
+  - text: " Approximately the mess rent for per month is 2000 rs."
+
+  utter_hosATM:
+  - text: " Yes, In college campus there is a ATM Machine."
+
+  utter_studyRoom:
+  - text: " Hostel has the separate study Room for student"
+
+  utter_wifiHostel:
+  - text: " Hostel has the wifi facility. each student has the separate IP for a wifi."
+
+  utter_HostelHygenic:
+  - text: " Yes, Hostel is very hygienic. Cleaners daily clean the hostel."
+
+
+# Gym Responses
+  utter_CollegeGym:
+  - text: " Yes ... The Gym is being provided for both girls and boys separately in their particular hostel."
+
+  utter_GymFees:
+  - text: " Students don't have to pay any extra fees for the gym. As it is free for everyone in the hostel."
+
+  utter_GymJoin:
+  - text: " If you are admitted to hostel no need to fill any extra form for the gym, as it comes under fitness facilities
+            provided for the hostel"
+
+  utter_GymAway:
+  - text: " It is in the particular hostel premises at ground floor."
+
+  utter_GymTime:
+  - text: " To avoid rush in the gym particular slots have been alloted for the particular years.
+            First Year - 6.00 AM to 8.00 AM
+            Second Year - 8.00 AM to 10.00 AM
+            Third Year - 4.00 PM to 6.00 PM
+            Fourth Year - 6.00 PM to 8.00 PM."
+  utter_GymRegistration:
+  - text: " While entering in the gym everyday you have to fill the name and timing in the gym register for record."
+
+  utter_GymEquipment:
+  - text: " There are particular equipments available in the gym which can be easily accessible to all like
+            treadmill, cycle, dumbles, elliptical machine, electronics skipping rope, legpress, shoulderpress,
+            cable tricep bar, hanging leg raise, rowing machine."
+  utter_GymMachine:
+  - text: " The machines are all new and highly maintained."
+
+  utter_GymCleaning:
+  - text: " Everyday cleaning is done all over the gym including the machines by cleaning personnel."
+
+  utter_WeighingMachine:
+  - text: " Yes Three weighing machine is availble in the gym including analogue as well as digital machine,"
+
+  utter_GymTrainer:
+  - text: " As the gym equipments and machines are easily accessible and handy to use everyone can do their
+            exercise on their own. No particular trainer needed for the gym."
+
+  utter_GymInstruction:
+  - text: " Instruction has been provided in front of the equipments before using so one can easily access them."
+
+  utter_GymMember:
+  - text: " 7 to 8 members at a time can easily enjoy exercising in the gym."
+
+  utter_GymYoga:
+  - text: " The college is being about to arrange yoga accessories for gym. But one cannot practice yoga in the gym because of heavy machinery."
+
+  utter_GymExtension:
+    - text: "If It is requested by students then definitely the college try its best to provide further any such development of the gym."
+
+
+
+# College Cantee Responses
+
+  utter_College_Canteen:
+  - text: "@@@@@ The Native Place of Food.@@@@@"
+    buttons:
+      - title: "Facility"
+        payload: "/CF"
+      - title: "Feature"
+        payload: "/feature"
+      - title: "Services"
+        payload: "/services"
+      - title: "Food"
+        payload: "/food"
+      - title: "Timing"
+        payload: "/CTiming"
+      - title: "Location"
+        payload: "/CLocation"
+
+  utter_CFacility:
+  - text: "   A favourite haunt of student during off hours is the spacious and well-designed canteen with a suitable aesthetic touch.
+              The canteen has a modern kitchen with the latest appliances to provide for Indian and chinese cuisine.
+              The interior is tastefully crafted to provide the much needed relief and soothing environment."
+
+  utter_Cservices:
+  - text:  " 1. Adequate & Well-furnished Canteen with proper Ventilation.
+             2. 50 Nos. Square Table with 100 seating capacity.
+             3. Chillers & Freezer Facilities."
+
+  utter_Cfeature:
+  - text: "1. RO,UV Water Purifier with Water Cooler.
+           2. CCTV Surveillance
+           3. Fire Extinguishers
+           4. Fully Wi-Fi Connected"
+
+
+  utter_Food:
+  - text: " 1. All types of Snacks(Maharashtrian, South Indian, Panjabi,and Chinese)
+            2. Juices & Cold Drinks , Ice-Cream
+            3. Chat Centre."
+
+  utter_location:
+  - text: " College Canteen is near to the College Auditorium."
+
+  utter_CanteenTiming:
+  - text: "@@@@@@ Canteen Time @@@@@@
+           7.00 AM to 8.00 PM."
+
+# College sports Responses
+
+  utter_CollegeSports:
+  - text: "Yes... The GECA college organizes the one week sports for students between the different departments in the college."
+  utter_NationalSport:
+  - text: "No, only the sports competition is held at college level. Between the various departments."
+
+
+  utter_sportParticipation:
+  - text: "Yes.. sports is for both girls and boys.. you can participate in particular sports for the particular department team."
+
+
+  utter_sportsGround:
+  - text: "Yes... college has a different playground for the different sports.
+         example-
+         1) Cricket Ground
+         2) Volleyball Ground
+         3) Basketball Ground
+         4) Football Ground
+         4) and all the other sports ground such as Kabbaddi, Kho-Kho, "
+
+
+  utter_sportsOther:
+  - text: "No.. The other college students can not participate in this sports event. This sports event is organized for only GECA college students."
+
+
+  utter_SportsType:
+  - text: "All the Indoor and Outdoor sports competitions are organize.
+ "
+    buttons:
+      - title: "Indoor"
+        payload: "/Indoor"
+      - title: "Outdoor"
+        payload: "/Outdoor"
+
+  utter_Indoor:
+  - text: "The Outdoor games are:
+         1) Chess
+         2) Table Tennis
+         3) Carrom Board
+         "
+
+  utter_Outdoor:
+  - text: "The Outdoor games are:
+           1) Cricket
+           2) Hockey
+           3) FootBall
+           4) VolleyBall
+           5) Kabbadi
+           6) Kho-kho"
+
+
+  utter_SportsInstruments:
+  - text: " Various sports equipments are available such as 1) Coaching Bags, Coaching Clipboards, Pinnis, Whistles,
+            Balls, Bases, Nets, goals and posts, Footwear, Jerseys, sports uniform, Elbow pads ... etc."
+
+  utter_SportsMatches:
+  - text: "The sports matches are held between only the department level students in the college."
+
+  utter_SportAcademic:
+  - text: "Yes.. The sports is compulsory for every student in academics. As sports have separate credits in academic results."
+
+  utter_SportsCommitee:
+  - text: "Yes.. the sports committee is for the organizing the sports events."
+
+  utter_sportCoodinator:
+  - text: "You can contact sports committee members.. and pass the basic interview for the sports co-coordinator."
+
+  utter_sportsFees:
+  - text: "Students don't have to pay any extra fees for the sports. As it is free for everyone in the college."
+
+  utter_sportsTime:
+  - text: "Sports Time is from 4.00 pm to 9.00 pm during other days.
+        and 9.00 am to 9.00 pm on saturday and sunday during the sports week."
+
+  utter_SportsHoliday:
+  - text: "No.. colleges have no holidays during the sports week. As the students can play after the classes and lectures are finished."
+
+  utter_sportBunk:
+  - text: "No... It is compulsory for the students to attend the college in sports week."
+
+  utter_sportMedical:
+  - text: "Yes... The Medical Kit, First-AID Box are available for the players.. Also player csn contact the sports committee members."
+
+  utter_sportsWeek:
+  - text: "The Tentative Dates for the sports week is the last week of March month."
+
+  utter_sportsCoach:
+  - text: "Yes.. The college allotted the different coaches for the different sports for training."
+
+
+
+# College Details Responses
+
+  utter_CollegeSpecial:
+  - text: "The aim of the college, for the individuals student, is to eliminate the need
+        in his life for the college; the task is to help him become a self-educating man."
+
+  utter_CollegeProud:
+  - text: "We are proud to be part of an institute that promotes a strong curriculum with a keen interest in participation beyonds books."
+
+  utter_CampusDiverse:
+  - text: "The campus houses high-tech amenities; basketball, squash and tennis courts; cricket, football and hockey
+         grounds and nature friendly campus"
+
+  utter_collegeRating:
+  - text: " GECA College is one of the best college of Maharashtra, It is among the top 10 colleges of Maharashtra(Including IITS,
+           IIITs,NITs."
+
+  utter_University:
+  - text: " Dr. Babasaheb Ambedkar Marathwada University."
+
+  utter_collegeLocation:
+  - text: " The institute is located near the Aurangabad Divisional Board of Higher Secondary Education(SSC),
+         The College is 2 km away from the Aurangabad Railway station;
+         3 km away from the central bus stand; and 9 km away from the Chikalthana Airport."
+
+  utter_Principal:
+  - text: " Dr. P. B. Murnal Sir."
+
+  utter_College_establish:
+  - text: " Government College of Engineering, Aurangabad(GECA) is an autonomous engineering Institute in Maharashtra state of
+         India. It is affiliated to the Dr. Babasaheb Ambedkar Marathwada University and was established in 1960."
+
+  utter_VM:
+  - text:  " VISION:- In pursuit of global competitiveness, the institute is committed to excel in engineering education and research
+                   which concerns the environment and society.
+
+          MISSION:- 1) Provide a conducive environment for academic excellence in engineering education.
+                    2) Enhance research and development along with promotion to sponsored projects and industrial
+                        consultancy.
+                    3) Faster development of students by creating awareness for needs of society,sustainable development and human values."
+
+  utter_reach:
+  - text: " Please select Your Option:"
+    buttons:
+     - title: "By Air"
+       payload: "/Air"
+     - title: "By Train"
+       payload: "/Train"
+     - title: "By Bus"
+       payload: "/BUS"
+
+  utter_Air:
+  - text: "BY Air
+        The airport is about 7 km from the institute."
+
+  utter_Train:
+  - text: " By Train
+         There are 4 direct trains daily to/from Mumbai. The Tapovan Express departs at 2.55 PM gets you into Mumbai at
+         11.20 pm.
+         The Overnight Devagiri Express departs from Aurangabad at 11 pm and arrives at mumbai at 7.00am
+         The Nandigram Express departs at 10.00pm and arrives at Mumbai at 5.00 am."
+
+  utter_Bus:
+  - text: "There are MSRTC Buses from Aurangabad To Pune, Nashik, Indore and Mumbai. The MSRTC and MTDC also
+        offer luxury overnight buses to Mumbai."
+
+  utter_collegeDept:
+  - text: " GECA College Departments are:-
+         1) Civil Engineering Department
+         2) Mechanical Engineering Department
+         3) Electrical Engineering Department
+         4) Computer Science Engineering Department
+         5) Electronics and Telecommunication Department
+         6) Information Technology Department
+         7) Master in computer Application Department
+         8) Applied Science Department
+         9) Applied Mathematics Department
+         10) Applied Mechanics Department
+          "
+
+  utter_clPattern:
+  - text: "The college is Semester Base only..."
+
+  utter_TransferCollege:
+  - text: "Yes you can change college during 2nd year of engineering universities accept transfer students.
+        To get a better college you need good grade points in marks. For transfer you have to directly apply to college
+        administration and take a transfer letter with the signature of your head of Institution."
+
+  utter_Tuto:
+  - text: " We are offering Online courses for the Students such as NPTEL,COURSERA etc."
+
+  utter_AddCancel:
+  - text: "1) Apply online for cancellation through candidate login on the website DTE Maharashtra.
+        2) Take Printout of application for cancellation of admission.
+        3) Submit the duly signed copy of the DTE application for cancellation of admission to the institute in person."
+
+  utter_CollegeTime:
+  - text: " College Opening Time: 10.30 Am.
+         College Closing Time: 5.30 Pm."
+
+  utter_Canteen:
+  - text: " The college is providing canteen facility to the student as well as teaching and non teaching staff of the college;
+           It is capable of catering the demands of the students."
+
+  utter_attendence:
+  - text: "It is very important that your attendance should be a 75 % in each Semester."
+
+  utter_collegeBunk:
+  - text: " Yes, You can not attend The Class Test and The End Semester Exam when you're bunking lectures.
+         It is very important that your attendance should be a 75 % in each Semester."
+
+  utter_CollegeExam:
+  - text: " Your Class attendance must be a 75 % for attending the Exam."
+
+  utter_CollegeContact:
+  - text: " Administrative Office
+         Phone No. - 0240-2366101"
+
+  utter_CollegeAddress:
+  - text: " GOVERNMENT COLLEGE OF ENGINEERING
+         Railway Station Road,
+         Aurangabad
+         Maharashtra,
+         India - 431005."
+
+  utter_Department:
+  - text: "Please Select Department"
+    buttons:
+      - title: Civil Engineering
+        payload: "/civilD"
+      - title: Electrical Engineering
+        payload: "/eleD"
+      - title: Mechanical Engineering
+        payload: "/mechD"
+      - title: Electronics & Telecommunication
+        payload: "/entcD"
+      - title: Computer Science & Engineering
+        payload: "/cseD"
+      - title: Information Technology
+        payload: "/ITD"
+      - title: Master in Computer Application
+        payload: "/mcaD"
+      - title: Applied Mechanics
+        payload: "/mechanicsD"
+      - title: Applied Mathematics
+        payload: "/mathD"
+      - title: Applied Science
+        payload: "/scienceD"
+
+  utter_civilD:
+  - text: " Welcome to Civil Engineering Department."
+    buttons:
+      - title: About
+        payload: "/AboutCivil"
+      - title: Courses Offered
+        payload: "/CoursesCivil"
+      - title: Head of Department
+        payload: "/hodCivil"
+      - title: Faculty and Staff
+        payload: "/staffCivil"
+      - title: Lab & Infrastructure
+        payload: "/labCivil"
+
+  utter_AboutCivil:
+  - text: " Civil Engineering is traditional branch of Engineering and is amongst the founding courses when the institution was started. The department is located in the 'Annexe' building of the college. The Department of Civil Engineering conducts both full time and part time undergraduate courses in Civil Engineering. It also conducts postgraduate programme in Water Resources Engineering and a part time Post-Graduate programme in Soil Engineering.
+         "
+    buttons:
+      - title: "More Info"
+        payload: "/Civil_Details"
+
+  utter_CoursesCivil:
+  - text: ""
+    buttons:
+      - title: "More Info"
+        payload: "/Civil_Details"
+
+  utter_hodCivil:
+  - text: "Dr. R.V.Shetkar"
+    buttons:
+      - title: "More Info"
+        payload: "/Civil_Details"
+  utter_staffCivil:
+  - text: ""
+    buttons:
+      - title: "More Info"
+        payload: "/Civil_Details"
+  utter_labCivil:
+  - text: ""
+
+    buttons:
+      - title: "More Info"
+        payload: "/Civil_Details"
+
+  utter_mechD:
+  - text: " Welcome to Mechanical Engineering Department."
+    buttons:
+      - title: About
+        payload: "/AboutMechanical"
+      - title: Courses Offered
+        payload: "/CoursesMechanical"
+      - title: Head of Department
+        payload: "/hodMechanical"
+      - title: Faculty and Staff
+        payload: "/staffMechanical"
+      - title: Lab & Infrastructure
+        payload: "/labMechanical"
+
+  utter_AboutMechanical:
+  - text: "The Department of Mechanical Engineering was the first branch started in the college in 1960. Mechanical Engineering is the Oldest branch of engineering and so as a tradition it was also the first branch to be started in the college. Research Areas of Department Composite Materials Optimization Techniques Cryogenic Processing Refrigeration and Multiphase Flow Renewable Energy Micro Manufacturing Vibration and Acoustics Finite Element Analysis Salient."
+    buttons:
+      - title: "More Info"
+        payload: "/Mech_Details"
+  utter_CoursesMechanical:
+  - text: ""
+    buttons:
+      - title: "More Info"
+        payload: "/Mech_Details"
+
+  utter_hodMechanical:
+  - text: "Prof. Dr. S.B.Chikalthankar"
+    buttons:
+      - title: "More Info"
+        payload: "/Mech_Details"
+
+  utter_staffMechanical:
+  - text: ""
+    buttons:
+      - title: "More Info"
+        payload: "/Mech_Details"
+
+  utter_labMechanical:
+  - text: ""
+    buttons:
+      - title: "More Info"
+        payload: "/Mech_Details"
+
+  utter_eleD:
+  - text: " Welcome to Electrical Engineering Department."
+    buttons:
+      - title: About
+        payload: "/AboutElectrical"
+      - title: Courses Offered
+        payload: "/CoursesElectrical"
+      - title: Head of Department
+        payload: "/hodElectrical"
+      - title: Faculty and Staff
+        payload: "/staffElectrical"
+      - title: Lab & Infrastructure
+        payload: "/labElectrical"
+
+  utter_AboutElectrical:
+  - text: " The Department of Electrical Engineering at the Government College of Engineering Aurangabad was established in 1960, foundation year of the Institute and has a history of almost 50 years. The Department offers full time undergraduate (B.E.) course in Electrical, Electronics and Power & two postgraduate (M.E.) course in Electrical Power System & Electrical Machines and Drives. The Department also offers part time undergraduate (B.E.) course in Electrical, Electronics and Power & postgraduate (M.E.) course in Electrical Power System for the employees working in nearby industrial, government sectors."
+    buttons:
+      - title: "More Info"
+        payload: "/ele_Details"
+  utter_CoursesElectrical:
+  - text: ""
+    buttons:
+      - title: "More Info"
+        payload: "/ele_Details"
+
+  utter_hodElectrical:
+  - text: "Mr.S.S.Dhamse"
+    buttons:
+      - title: "More Info"
+        payload: "/ele_Details"
+
+  utter_staffElectrical:
+  - text: ""
+    buttons:
+      - title: "More Info"
+        payload: "/ele_Details"
+
+  utter_labElectrical:
+  - text: ""
+    buttons:
+      - title: "More Info"
+        payload: "/ele_Details"
+
+  utter_cseD:
+  - text: " Welcome to Civil Engineering Department."
+    buttons:
+      - title: About
+        payload: "/AboutCse"
+      - title: Courses Offered
+        payload: "/CoursesCse"
+      - title: Head of Department
+        payload: "/hodCse"
+      - title: Faculty and Staff
+        payload: "/staffCse"
+      - title: Lab & Infrastructure
+        payload: "/labCse"
+
+  utter_AboutCse:
+  - text: " Computers have captured the world. Today there is no single field were computers have not left a mark. The Department of Computer Science and Engineering established in 1986 is dedicated to produce students who excel in this field. The department aims at IT based Learning, Development of Entrepreneurship among student and become a Centre of Excellence. The Department places high priority on establishing and maintaining innovative research programs that enhance the educational opportunity and encourage a broad base of extramural support to prepare future generations of computer professionals for long term careers in research, technical development and applications. The department has organized many series of expert lecture for the students on the latest developing trends in computer industry."
+    buttons:
+      - title: "More Info"
+        payload: "/CSE_Details"
+  utter_CoursesCse:
+  - text: ""
+    buttons:
+      - title: "More Info"
+        payload: "/CSE_Details"
+
+  utter_hodCse:
+  - text: " Dr. Vivek Shirsagar
+            Designation: HOD & Associate Professor
+            Qualification /[expertise] : PhD (Computer Science & Engineering)"
+    buttons:
+      - title: "More Info"
+        payload: "/CSE_Details"
+
+  utter_staffCse:
+  - text: ""
+    buttons:
+      - title: "More Info"
+        payload: "/CSE_Details"
+
+  utter_labCse:
+  - text: ""
+    buttons:
+      - title: "More Info"
+        payload: "/CSE_Details"
+
+  utter_eTD:
+  - text: " Welcome to Electronics & Telecommunication Department."
+    buttons:
+      - title: About
+        payload: "/AboutEntc"
+      - title: Courses Offered
+        payload: "/CoursesEntc"
+      - title: Head of Department
+        payload: "/hodEntc"
+      - title: Faculty and Staff
+        payload: "/staffEntc"
+      - title: Lab & Infrastructure
+        payload: "/labEntc"
+
+  utter_AboutEntc:
+  - text: " Department of E&TC had started U.G. Course B.E.(E&TC) in 1986 with sanctioned intake of 40 and enhanced to 60 in 1996. Department also runs full time Post Graduate Course M.E. (EC) and well equipped Recognized Research centre leading to Ph.D. (Electronics Engineering). Part time BE (E&TC) and part time ME (EC) are also run to give opportunity to working graduates and diploma holders. The department has well qualified and dedicated faculty with an average teaching experience of these faculty members is more than 20 years."
+    buttons:
+      - title: "More Info"
+        payload: "/ET_Details"
+  utter_CoursesEntc:
+  - text: ""
+    buttons:
+      - title: "More Info"
+        payload: "/ET_Details"
+
+  utter_hodEntc:
+  - text: " Prof. H. R. Hirekhan
+            Designation: Associate Professor & HOD
+            Qualification /[expertise]: ME"
+    buttons:
+      - title: "More Info"
+        payload: "/ET_Details"
+
+  utter_staffEntc:
+  - text: ""
+    buttons:
+      - title: "More Info"
+        payload: "/ET_Details"
+
+  utter_labEntc:
+  - text: ""
+    buttons:
+      - title: "More Info"
+        payload: "/ET_Details"
+
+  utter_ITD:
+  - text: " Welcome to Information Technology Department."
+    buttons:
+      - title: About
+        payload: "/AboutIT"
+      - title: Courses Offered
+        payload: "/CoursesIT"
+      - title: Head of Department
+        payload: "/hodIT"
+      - title: Faculty and Staff
+        payload: "/staffIT"
+      - title: Lab & Infrastructure
+        payload: "/labIT"
+
+  utter_AboutIT:
+  - text: "Information Technology Discipline was started in 2000-01 in the Government Engineering College, Aurangabad. Department of Information Technology got established from academic year 2002-03. Starting aim was to implement the UG programme in Information Technology with intake capacity of 60. Goals in the nearest future: - Establishing the department as individual independent entity - Setting up of modernized laboratories - Development of departmental library - Enhancing testing facilities - Strengthening industry institute relations through interaction - Motivating the faculty for higher education."
+    buttons:
+      - title: "More Info"
+        payload: "/IT_Details"
+
+  utter_CoursesIT:
+  - text: ""
+    buttons:
+      - title: "More Info"
+        payload: "/IT_Details"
+
+  utter_hodIT:
+  - text:  " Ms. Anjana Narayanrao Ghule
+             Designation: Head and Assistant Professor
+             Qualification /[expertise]: BE(CSE), ME(CSE)"
+    buttons:
+      - title: "More Info"
+        payload: "/IT_Details"
+
+  utter_staffIT:
+  - text: ""
+    buttons:
+      - title: "More Info"
+        payload: "/IT_Details"
+
+  utter_labIT:
+  - text: ""
+    buttons:
+      - title: "More Info"
+        payload: "/IT_Details"
+
+  utter_mcaD:
+  - text: " Welcome to Master in Computer Application Department."
+    buttons:
+      - title: About
+        payload: "/AboutMCA"
+      - title: Courses Offered
+        payload: "/CoursesMCA"
+      - title: Head of Department
+        payload: "/hodMCA"
+      - title: Faculty and Staff
+        payload: "/staffMCA"
+      - title: Lab & Infrastructure
+        payload: "/labMCA"
+
+  utter_AboutMCA:
+  - text: "Computers have captured the world. Today there is no single field were computers have not left a mark. The Department of Computer Science and Engineering established in 1986 is dedicated to produce students who excel in this field. The department aims at IT based Learning, Development of Entrepreneurship among student and become a Centre of Excellence. "
+    buttons:
+      - title: "More Info"
+        payload: "/MCA_Details"
+  utter_CoursesMCA:
+  - text: ""
+    buttons:
+      - title: "More Info"
+        payload: "/MCA_Details"
+
+  utter_hodMCA:
+  - text: " Dr. Praveen Shetiye
+            Designation: HOD & Associate Professor
+            Qualification /[expertise]:PhD(Computer Science & Engineering)"
+    buttons:
+      - title: "More Info"
+        payload: "/MCA_Details"
+  utter_staffMCA:
+  - text: ""
+    buttons:
+      - title: "More Info"
+        payload: "/MCA_Details"
+
+  utter_labMCA:
+  - text: ""
+    buttons:
+      - title: "More Info"
+        payload: "/MCA_Details"
+
+  utter_mathD:
+  - text: " Welcome to Mathematics Department."
+    buttons:
+      - title: About
+        payload: "/AboutMath"
+      - title: Courses Offered
+        payload: "/CoursesMath"
+      - title: Head of Department
+        payload: "/hodMath"
+      - title: Faculty and Staff
+        payload: "/staffMath"
+      - title: Lab & Infrastructure
+        payload: "/labMath"
+
+  utter_AboutMath:
+  - text: "Mathematics is the basic need of all Engineering Sciences. Hence it is included as a compulsory subject in the syllabi for all the branches of engineering education. Engineering Mathematics is taught at first and second year of B.E. degree course as well as for M.E. and MCA courses. The subject is aimed at improving the basic mathematical skills of Engineering students. The topics introduced will serve as basic tools for specialized studies in many Engineering fields. Also Discrete Mathematics is taught to the Computer Science & Engineering, MCA and I.T. students"
+    buttons:
+      - title: "Click Here"
+        payload: "/Math_Details"
+
+  utter_CoursesMath:
+  - text: ""
+    buttons:
+      - title: "More Info"
+        payload: "/Math_Details"
+  utter_hodMath:
+  - text: "Mr.Sunil Devidas Ahirrao
+           Designation: HOD
+           Qualification /[expertise] : MSC (Mathematics)"
+    buttons:
+      - title: "More Info"
+        payload: "/Math_Details"
+
+  utter_staffMath:
+  - text: ""
+    buttons:
+      - title: "More Info"
+        payload: "/Math_Details"
+
+  utter_labMath:
+  - text: ""
+    buttons:
+      - title: "More Info"
+        payload: "/Math_Details"
+
+  utter_scienceD:
+  - text: " Welcome to Science Department."
+    buttons:
+      - title: About
+        payload: "/AboutScience"
+      - title: Courses Offered
+        payload: "/CoursesScience"
+      - title: Head of Department
+        payload: "/hodScience"
+      - title: Faculty and Staff
+        payload: "/staffScience"
+      - title: Lab & Infrastructure
+        payload: "/labScience"
+
+  utter_AboutScience:
+  - text: "Applied Science Department includes two Basic sciences 1. Physics 2. Chemistry The Department conducts the course for the first year students of engineering to develop use of applied science for research and technical careers in industries, academia and government. For the better understanding of technical and engineering education system."
+    buttons:
+      - title: "More Info"
+        payload: "/Science_Details"
+  utter_CoursesScience:
+  - text: ""
+    buttons:
+      - title: "More Info"
+        payload: "/Science_Details"
+
+  utter_hodScience:
+  - text: "Prof. M.P. BHUSARI (HOD Chemistry)
+          Dr. S. M. DESAI  (HOD Physics)"
+    buttons:
+      - title: "More Info"
+        payload: "/Science_Details"
+  utter_staffScience:
+  - text: ""
+    buttons:
+      - title: "More Info"
+        payload: "/Science_Details"
+
+  utter_labScience:
+  - text: ""
+    buttons:
+      - title: "More Info"
+        payload: "/Science_Details"
+
+  utter_mechanicsD:
+  - text: " Welcome to Mechanics Engineering Department."
+    buttons:
+      - title: About
+        payload: "/AboutMechanics"
+      - title: Courses Offered
+        payload: "/CoursesMechanics"
+      - title: Head of Department
+        payload: "/hodMechanics"
+      - title: Faculty and Staff
+        payload: "/staffMechanics"
+      - title: Lab & Infrastructure
+        payload: "/labMechanics"
+
+  utter_AboutMechanics:
+  - text: "The Department of Applied Mechanics is an important PG department in the institute. It not only runs PG programme in Structural Engineering with 18 intake capacity every year, but also caters to the needs of various UG programmes in the institute by teaching Engineering Mechanics, Strength of Materials, etc. The department has highest number of faculty members possessing PhD qualifications, who are quite interested in pursuing research work in structural engineering."
+    buttons:
+      - title: "More Info"
+        payload: "/Mechanics_Details"
+
+  utter_CoursesMechanics:
+  - text: ""
+    buttons:
+      - title: "More Info"
+        payload: "/Mechanics_Details"
+
+  utter_hodMechanics:
+  - text: "Dr. R. S. Londhe
+           Designation: Professor & HOD
+           Qualification /[expertise]: PhD"
+    buttons:
+      - title: "More Info"
+        payload: "/Mechanics_Details"
+  utter_staffMechanics:
+  - text: ""
+    buttons:
+      - title: "More Info"
+        payload: "/Mechanics_Details"
+
+  utter_labMechanics:
+  - text: ""
+    buttons:
+      - title: "More Info"
+        payload: "/Mechanics_Details"
+
+  #initial buttons actions
+  utter_TrainingandPlacement:
+  - text: "Please ask if you have any queries  about our college's training and placement ! Happy to answer them all !"
+
+  utter_library:
+  - text: "Please ask if you have any queries about our college's Library ! Happy to answer them all !"
+
+  utter_examination:
+  - text: "Please ask if you have any queries about Examination ! Happy to answer them all !  "
+
+  utter_sports:
+  - text: " Please ask if you have any queries about college sports ! Happy to answer them all !  "
+
+  utter_gym:
+  - text: " Please ask if you have any queries about college GYM ! Happy to answer them all !  "
+
+  utter_canteen:
+  - text: " Please ask if you have any queries about college canteen ! Happy to answer them all !  "
+
+  utter_Hostel1:
+  - text: " Please ask if you have any queries about college Hostel ! Happy to answer them all !  "
+
+  utter_collegedetailsgeneral:
+  - text: " Please ask all particular question about college ! Happy to answer them all !  "
+
+  utter_Departmentdetails:
+  - text: " Please ask all particular question about different departments ! Happy to answer them all ! "
+
+  #utter action of academics
+  utter_message:
+  - text: "Ok ! let me check for validity"
+
+  utter_login:
+  - text: "Please login for this facility !"
+
+  utter_academicchoices:
+  - text: "Would You like to see your details or want to do Course Registration ?"
+
+  utter_greetagain:
+  - text: "Welcome back ! Successfully logged in!"
+
+  utter_ask_uname:
+  - text: "what is your username"
+
+  utter_ask_passwd:
+  - text: "what is your password"
+
+  utter_ask_optsub:
+  - text: "Select the optional course from the given courses"
+
+  utter_thanks:
+  - text: "thank you"
+
+
+
+
+
+
+
+
+
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions :
+  - action_tpo
+  - place_rec_third
+  - placement_record_fourthfifth
+  - place_recordOf_fifteensixteen
+  - placement_recordOf_serVenteen
+  - placeme_record_lastofYear
+  - action_Civil_Details
+  - action_ele_Details
+  - action_Mech_Details
+  - action_CSE_Details
+  - action_ET_Details
+  - action_IT_Details
+  - action_MCA_Details
+  - action_Science_Details
+  - action_Math_Details
+  - action_Mechanics_Details
+  - action_educationloan
+  - action_scholarship
+  - action_studentsection
+  - action_admission
+  - send_email_sender
+
+
